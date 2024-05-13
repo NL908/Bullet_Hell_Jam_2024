@@ -7,16 +7,11 @@ public abstract class EnemyProjectile : MonoBehaviour
     [SerializeField] protected int damage_value = 10;
     [SerializeField] protected int speed = 10;
     [SerializeField] protected bool destroy_on_hit = true;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    protected void OnBecameInvisible()
     {
-        
+        // Since the game is in fixed arena with fixed camera position & angle
+        // Destory projectile object when leaves camera
+        Destroy(gameObject);
     }
 }
