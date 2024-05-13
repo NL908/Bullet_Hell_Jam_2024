@@ -18,10 +18,10 @@ public class PlayerInputHandler : MonoBehaviour
     #region Aim variables
     [Header("Aim Related")]
     // Mouse screen position input
-    public Vector2 mouseAimPositionInput;
+    [SerializeField] private Vector2 mouseAimPositionInput;
 
     // Controller aim direction input
-    public Vector2 controllerAimDirectionInput;
+    [SerializeField] private Vector2 controllerAimDirectionInput;
     
     // Player's aiming direction. A normalized Vector2
     public Vector2 aimDirection = new Vector2(1, 0);
@@ -109,10 +109,5 @@ public class PlayerInputHandler : MonoBehaviour
     private void FireButtonInput()
     {
         fireButton = _fireAction.IsPressed();
-    }
-
-    private void Update()
-    {
-        TickInput();
     }
 }
