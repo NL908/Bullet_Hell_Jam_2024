@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    public static PlayerControls inputActions;
+    private PlayerControls inputActions;
+    private PlayerWeaponManager playerWeaponManager;
 
     #region Movement variables
     [Header("Movement Related")]
@@ -53,6 +55,14 @@ public class PlayerInputHandler : MonoBehaviour
         _controllerAimDirectionAction.performed += obj => isMouseAimControl = false;
 
         _fireAction = inputActions.Player.Fire;
+
+        inputActions.Player.SelectPreviousWeapon.performed += SelectPreviousWeapon_performed;
+        inputActions.Player.SelectNextWeapon.performed += SelectNextWeapon_performed;
+    }
+
+    private void Start()
+    {
+        playerWeaponManager = GetComponent<PlayerWeaponManager>();
     }
 
     private void OnEnable()
@@ -64,6 +74,8 @@ public class PlayerInputHandler : MonoBehaviour
         _controllerAimDirectionAction.Enable();
 
         _fireAction.Enable();
+
+        inputActions.Player.SelectNextWeapon.Enable();
     }
 
     private void OnDisable()
@@ -109,5 +121,14 @@ public class PlayerInputHandler : MonoBehaviour
     private void FireButtonInput()
     {
         fireButton = _fireAction.IsPressed();
+    }
+
+    private void SelectPreviousWeapon_performed(InputAction.CallbackContext obj)
+    {
+        playerWeaponManager.SelectPrevWeapon();
+    }
+    private void SelectNextWeapon_performed(InputAction.CallbackContext obj)
+    {
+        playerWeaponManager.SelectNextWeapon();
     }
 }
