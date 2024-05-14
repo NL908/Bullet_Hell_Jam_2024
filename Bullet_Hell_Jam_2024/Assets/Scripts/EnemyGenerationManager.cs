@@ -80,7 +80,7 @@ public class EnemyGenerationManager : MonoBehaviour
     {
         // A random degree for the enemy to spawn
         float theta = Random.value * 2 * Mathf.PI;
-        // Arena radius
+        // TODO: Get Arena radius
         float x = Mathf.Cos(theta);
         float y = Mathf.Sin(theta);
         Vector2 groupSpawnPoint =
@@ -99,7 +99,8 @@ public class EnemyGenerationManager : MonoBehaviour
             // TODO: For debugging purposes, spawm them all at groupSpawmPoint for now
             Vector2 spawnPoint = groupSpawnPoint;
             Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
-            yield return new WaitForSeconds(0.5f);
+            // TODO: Change this with a SerializeField variable
+            yield return new WaitForSeconds(0.25f);
         }
     }
 }
