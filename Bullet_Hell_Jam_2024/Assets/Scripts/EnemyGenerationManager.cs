@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyGenerationManager : MonoBehaviour
@@ -7,10 +8,29 @@ public class EnemyGenerationManager : MonoBehaviour
     public static EnemyGenerationManager instance;
 
     [SerializeField]
+    private float enemySpawnBufferDistance;
+    //[SerializeField]
+    //private float enemySpawnRadius;
+    [SerializeField]
+    private float enemySpawnRandomArcDegree;
+    private float enemySpawnRandomArcRadiant;
+
+    [SerializeField]
     public EnemyGenerationProgressGroup[] progressGroups;
 
     // Passive generation rate. Unit in per second
     public float passiveGenerationRate = 1f;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    private void Start()
+    {
+        enemySpawnRandomArcRadiant = Mathf.Deg2Rad * enemySpawnRandomArcDegree;
+        InvokeRepeating("CheckEnemySpawns", 0, 0.5f);
+    }
 
     private void Update()
     {
@@ -31,5 +51,56 @@ public class EnemyGenerationManager : MonoBehaviour
     public void UpdateWeaponFire(int index)
     {
         progressGroups[index].UpdateProgress(progressGroups[index].fireProgressRate);
+    }
+
+    // Check all GenerationProgress in progressGroups and spawn enemies that has a full progression
+    private void CheckEnemySpawns()
+    {
+        // Get a List of enemies that need to be spawned
+        List<(GameObject, int)> enemyGameObjects = new List<(GameObject, int)>();
+        foreach(EnemyGenerationProgressGroup progressGroup in progressGroups)
+        {
+            enemyGameObjects = enemyGameObjects.Concat(progressGroup.CheckIsProgressComplete()).ToList();
+        }
+        Debug.Log(enemyGameObjects.Count());
+        // Call SpawnEnemies for each enemy prefab and number of enemies to spawn in a group
+        foreach ((GameObject enemy, int num) in enemyGameObjects)
+        {
+            StartCoroutine(SpawnEnemies(enemy, num));
+        }
+    }
+
+    /* Spawn a group of enemies with a small interview between each enemy spawn in the group
+       For each (enemy GameObject, enemy spawn number) in the list:
+             - Random from 0 to 2pi as the spawning direction 
+             - Get the position that is outside of the arena
+             - Initialize them closely around the spawning point given a radius
+    */
+    private IEnumerator SpawnEnemies(GameObject enemyPrefab, int num)
+    {
+        // A random degree for the enemy to spawn
+        float theta = Random.value * 2 * Mathf.PI;
+        // TODO: Get Arena radius
+        float x = Mathf.Cos(theta);
+        float y = Mathf.Sin(theta);
+        Vector2 groupSpawnPoint =
+            new Vector2(x * (enemySpawnBufferDistance),
+            y * (enemySpawnBufferDistance));
+        
+        // Spawn enemies and wait between each spawn
+        for (int i = 0; i < num; i ++)
+        {
+            /*float enemyGroupSpawnTheta = enemySpawnRandomArcRadiant * (Random.value * 2 - 1);
+            Vector2 spawnPoint = new Vector2(
+                Mathf.Cos(enemyGroupSpawnTheta) + groupSpawnPoint.x,
+                Mathf.Sin(enemyGroupSpawnTheta) + groupSpawnPoint.y
+                );
+            */
+            // TODO: For debugging purposes, spawm them all at groupSpawmPoint for now
+            Vector2 spawnPoint = groupSpawnPoint;
+            Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
+            // TODO: Change this with a SerializeField variable
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 }

@@ -26,9 +26,9 @@ public class EnemyGenerationProgressGroup
 
     // Method to check if any progress has complete
     // Return a list of enemy prefabs for complete progresses
-    public List<(GameObject, float)> CheckIsProgressComplete()
+    public List<(GameObject, int)> CheckIsProgressComplete()
     {
-        List<(GameObject, float)> enemyGameObjects = new List<(GameObject, float)>();
+        List<(GameObject, int)> enemyGameObjects = new List<(GameObject, int)>();
         
         if (easyProgress.IsProgressComplete())
         {
