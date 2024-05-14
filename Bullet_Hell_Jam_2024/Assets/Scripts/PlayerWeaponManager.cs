@@ -8,6 +8,7 @@ public class PlayerWeaponManager : MonoBehaviour
     PlayerInputHandler inputHandler;
     [SerializeField] ProjectileEmitter[] emitters;
 
+    float weaponTimer = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,13 @@ public class PlayerWeaponManager : MonoBehaviour
     void Update()
     {
         ProjectileEmitter currentEmitter = emitters[selectedWeaponIndex];
-        currentEmitter.isActive = inputHandler.fireButton;
+        weaponTimer -= Time.deltaTime;
+        if (inputHandler.fireButton) {
+            if (weaponTimer <= 0) {
+                currentEmitter.EmitProjectile();
+                weaponTimer = currentEmitter.emitInterval;
+            }
+        }
     }
 
     public void SelectNextWeapon()
