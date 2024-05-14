@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EnemyProjectile : MonoBehaviour
+public class PlayerProjectile : MonoBehaviour
 {
     [SerializeField] protected int damage_value = 10;
     [SerializeField] protected int speed = 10;
@@ -14,4 +14,5 @@ public abstract class EnemyProjectile : MonoBehaviour
         // Destory projectile object when leaves camera
         Destroy(gameObject);
     }
+
 }

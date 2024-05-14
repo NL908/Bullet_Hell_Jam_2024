@@ -4,17 +4,26 @@ using UnityEngine;
 
 public abstract class ProjectileEmitter : MonoBehaviour
 {
-    [SerializeField] protected GameObject projectilePrefab;
+    [SerializeField] protected Projectile projectilePrefab;
+    [SerializeField] protected float emitInterval = 0.5f;
+    float timer = 0f;
+    [SerializeField] public bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = emitInterval;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        
+        if (isActive) {
+            timer -= Time.deltaTime;
+            if (timer <= 0) {
+                EmitProjectile();
+                timer = emitInterval;
+            }
+        }
     }
 
     /// <summary>

@@ -21,8 +21,6 @@ public class TestEnemy : MonoBehaviour
         if (timerRunning) {
             timer -= Time.deltaTime;
             if (timer <= 0) {
-                emitter.EmitProjectile();
-                targetEmitter.EmitProjectileTowardsTarget(GameObject.FindGameObjectWithTag("Player").transform);
                 timer = projectileInterval;
             }
         }

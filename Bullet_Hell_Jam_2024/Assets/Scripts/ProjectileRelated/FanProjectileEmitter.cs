@@ -16,9 +16,9 @@ public class FanProjectileEmitter : ProjectileEmitter
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        
+        base.Update();
     }
 
     public override void EmitProjectile() {
@@ -27,7 +27,7 @@ public class FanProjectileEmitter : ProjectileEmitter
         Vector3 direction = playerTransform.position - transform.position;
         for (int i = 0; i < numberOfProjectiles; i++)
         {
-            GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
+            Projectile projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
             if (targetPlayer) {
                 // Adjust angle by 90 degrees if the sprite is oriented up by default
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
