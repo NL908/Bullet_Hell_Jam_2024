@@ -4,16 +4,16 @@ using UnityEngine;
 public class EnemyGenerationProgress
 {
     // Progress variables
-    [HideInInspector]
+    //[HideInInspector]
     public float currentProgress;
 
     [SerializeField]
-    private float maxProgress;
+    private float maxProgress = 10;
 
     [SerializeField]
     private GameObject enemyPrefab;
     [SerializeField]
-    private float enemySpawnNumber;
+    private int enemySpawnNumber = 1;
 
     public EnemyGenerationProgress(float maxProgress)
     {
@@ -41,7 +41,7 @@ public class EnemyGenerationProgress
     }
 
     // return a tuple with enemy GameObject and the number of enemy spawn with it
-    public (GameObject, float) GetEnemyPrefab()
+    public (GameObject, int) GetEnemyPrefab()
     {
         return (enemyPrefab, enemySpawnNumber);
     }

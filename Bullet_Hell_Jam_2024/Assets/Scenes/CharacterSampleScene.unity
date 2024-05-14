@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1315987166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315987168}
+  - component: {fileID: 1315987167}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1315987167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315987166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba3b9d62079e944396afe3ced781354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawnBufferDistance: 10
+  enemySpawnRadius: 0
+  enemySpawnRandomArcDegree: 0
+  progressGroups:
+  - easyProgress:
+      currentProgress: 0
+      maxProgress: 2
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
+      enemySpawnNumber: 1
+    mediumProgress:
+      currentProgress: 0
+      maxProgress: 3
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
+      enemySpawnNumber: 1
+    hardProgress:
+      currentProgress: 0
+      maxProgress: 5
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
+      enemySpawnNumber: 1
+    fireProgressRate: 1
+  passiveGenerationRate: 1
+--- !u!4 &1315987168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315987166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.62400365, y: -0.23317666, z: -0.015366153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1667337043
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,3 +388,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1667337046}
   - {fileID: 5631533699965234571}
+  - {fileID: 1315987168}

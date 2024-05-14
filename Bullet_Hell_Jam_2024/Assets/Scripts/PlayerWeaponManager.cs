@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PlayerWeaponManager : MonoBehaviour
 {
+    public static PlayerWeaponManager instance;
+
     public int selectedWeaponIndex = 0;
     PlayerInputHandler inputHandler;
     [SerializeField] ProjectileEmitter[] emitters;
 
     float weaponTimer = 0f;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
