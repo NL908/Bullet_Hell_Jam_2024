@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class ProjectileEmitter : MonoBehaviour
 {
-    [SerializeField] protected EnemyProjectile projectilePrefab;
+    [SerializeField] protected GameObject projectilePrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +17,8 @@ public abstract class ProjectileEmitter : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Emit projectile when this method is called
+    /// </summary>
     public abstract void EmitProjectile();
 }

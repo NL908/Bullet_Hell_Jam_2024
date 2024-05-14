@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage_value: 10
-  speed: 10
+  speed: 4
   destroy_on_hit: 1
