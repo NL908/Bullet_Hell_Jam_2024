@@ -17,6 +17,7 @@ public abstract class Enemy : MonoBehaviour
     /* Property */
     // For Movement
     [SerializeField] protected float maxSpeed = 2f;
+    [SerializeField] protected float steerForce;
     [SerializeField] protected float acceleration;
     [SerializeField] protected float deceleration;
     [SerializeField] protected Vector2 direction;
@@ -58,9 +59,11 @@ public abstract class Enemy : MonoBehaviour
         Vector2 steering = CalcSteering(target);
         // Clamp to steering vector so that it does not excede the maximum turn rate/
         //steering = steering * turnRate * Time.deltaTime;
-        steering = steering * acceleration * Time.deltaTime;
+        steering = steering * steerForce * Time.deltaTime;
         // Clamp the velocity so it's within the max speed and the minimum speed by deceleration
-        Vector2 newVelocity = ClampMagnitude(_rb.velocity + steering, _rb.velocity.magnitude - deceleration * Time.deltaTime, maxSpeed);
+        Vector2 newVelocity = ClampMagnitude(_rb.velocity + steering,
+            Mathf.Max(_rb.velocity.magnitude - deceleration * Time.deltaTime, 0f),
+            Mathf.Min(_rb.velocity.magnitude + acceleration * Time.deltaTime, maxSpeed));
 
         transform.rotation = Quaternion.LookRotation(Vector3.forward, newVelocity);
         _rb.velocity = newVelocity;

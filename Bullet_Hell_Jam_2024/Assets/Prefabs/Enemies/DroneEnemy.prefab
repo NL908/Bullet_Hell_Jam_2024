@@ -175,7 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  acceleration: 4
+  steerForce: 4
+  acceleration: 1
   deceleration: 0
   direction: {x: 0, y: 0}
   hp: 1

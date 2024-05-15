@@ -5,27 +5,19 @@ using UnityEngine;
 
 public class ShooterEnemy : Enemy
 {
-
-    /* Implementation of Abtract Method */
-
-    // Handle events on hit
-    protected void onHit()
-    {
-
-    }
-
-    /* Engine Method */
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-                
-    }
-    private void OnBecameInvisible()
-    {
-        Debug.Log(_emitters.Length.ToString());
-    }
+    [Header("Shooter Enemy Variables")]
+    [SerializeField]
+    private float distanceFromPlayer = 4f;
 
     protected override Vector2 CalcSteering(Vector2 target)
     {
-        throw new System.NotImplementedException();
+        Vector2 desiredVelocity = (target - (Vector2)transform.position).normalized * maxSpeed;
+        if (Vector2.Distance(target, transform.position) <= distanceFromPlayer)
+        {
+            desiredVelocity = -desiredVelocity;
+        }
+
+        Vector2 steering = (desiredVelocity - _rb.velocity);
+        return steering;
     }
 }
