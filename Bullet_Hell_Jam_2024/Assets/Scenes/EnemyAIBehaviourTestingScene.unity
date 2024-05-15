@@ -175,10 +175,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -235,10 +231,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_Name
       value: DroneEnemy (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -297,10 +289,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -314,10 +302,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1092143512415111228, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: sinDegree
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4911692423784124438, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.59
@@ -419,10 +403,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (18)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -439,6 +419,7 @@ GameObject:
   - component: {fileID: 910182442}
   - component: {fileID: 910182441}
   - component: {fileID: 910182440}
+  - component: {fileID: 910182443}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -520,6 +501,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910182443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910182439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1001 &1006236958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,10 +596,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_Name
       value: DroneEnemy (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -633,10 +654,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -693,10 +710,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_Name
       value: DroneEnemy (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -755,10 +768,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -815,10 +824,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_Name
       value: DroneEnemy (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -877,10 +882,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -937,10 +938,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_Name
       value: DroneEnemy (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -999,10 +996,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1059,10 +1052,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_Name
       value: DroneEnemy (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1121,10 +1110,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1182,10 +1167,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1242,10 +1223,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_Name
       value: DroneEnemy (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1361,10 +1338,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEnemy (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1378,13 +1351,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1092143512415111228, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: sinDegree
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4911692423784124438, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.12
+      value: -6.523
       objectReference: {fileID: 0}
     - target: {fileID: 4911692423784124438, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1482,10 +1451,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       propertyPath: m_Name
       value: DroneEnemy (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

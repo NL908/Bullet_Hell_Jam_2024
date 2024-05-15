@@ -14,12 +14,12 @@ public class DroneEnemey : Enemy
        Always charge towards player 
     */
 
-    private float randomSeed;
+    private float randomSeed = 0f;
 
     protected override void Start()
     {
         base.Start();
-        randomSeed = Random.value * 2 * Mathf.PI;
+        //randomSeed = Random.value * 2 * Mathf.PI;
     }
 
     protected override Vector2 CalcSteering(Vector2 target)
