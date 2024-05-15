@@ -5,6 +5,7 @@ using UnityEngine;
 public class ForwardExplodeProjectile : ForwardProjectile
 {
     public LayerMask enemyLayer;
+    [SerializeField] ParticleSystem particle;
     [SerializeField] int explosionDamage = 50;
     [SerializeField] float explosionRadius = 2f;
     // Start is called before the first frame update
@@ -23,8 +24,8 @@ public class ForwardExplodeProjectile : ForwardProjectile
     {
         if (!isEnemy && other.tag == "Enemy") {
             Debug.Log("*Gasp* The enemy!");
+            Explode();
             if (destroyOnHit) {
-                Explode();
                 Destroy(gameObject);
             }
         }
@@ -34,8 +35,16 @@ public class ForwardExplodeProjectile : ForwardProjectile
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyLayer);
         foreach (Collider2D hit in colliders) {
             Debug.Log("*Gasp* The enemy "+hit.name+" caught in explosion");
+            ParticleSystem particleInstance = Instantiate(particle, transform.position, transform.rotation);
+            StartCoroutine(DestroyParticle(1, particleInstance));
         }
         
+    }
+
+    private IEnumerator DestroyParticle(float delay, Object particle)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(particle);
     }
 
     void OnDrawGizmos()

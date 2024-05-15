@@ -38,11 +38,17 @@ public class PlayerWeaponManager : MonoBehaviour
 
     public void SelectNextWeapon()
     {
-
+        selectedWeaponIndex += 1;
+        if (selectedWeaponIndex >= emitters.Length) {
+            selectedWeaponIndex = 0;
+        }
     }
 
     public void SelectPrevWeapon()
     {
-
+        selectedWeaponIndex -= 1;
+        if (selectedWeaponIndex < 0) {
+            selectedWeaponIndex = emitters.Length - 1;
+        }
     }
 }
