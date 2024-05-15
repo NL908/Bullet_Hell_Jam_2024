@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+
     PlayerInputHandler inputHandler;
     PlayerLocomotion playerLocomotion;
 
     Rigidbody2D _rb;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         inputHandler = GetComponent<PlayerInputHandler>();

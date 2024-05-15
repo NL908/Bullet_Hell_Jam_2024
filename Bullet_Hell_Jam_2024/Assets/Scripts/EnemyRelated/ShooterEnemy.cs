@@ -23,4 +23,9 @@ public class ShooterEnemy : Enemy
     {
         Debug.Log(_emitters.Length.ToString());
     }
+
+    protected override Vector2 CalcSteering(Vector2 target)
+    {
+        throw new System.NotImplementedException();
+    }
 }

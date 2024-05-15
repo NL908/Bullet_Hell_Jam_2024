@@ -25,8 +25,8 @@ public class TankEnemy: Enemy
         
     }
 
-    private void Start()
+    protected override Vector2 CalcSteering(Vector2 target)
     {
-        
+        throw new System.NotImplementedException();
     }
 }
