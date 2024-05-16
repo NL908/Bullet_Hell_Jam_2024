@@ -11,6 +11,9 @@ public class ShooterEnemy : Enemy
 
     protected override Vector2 CalcSteering(Vector2 target)
     {
+        /* Shooter enemy uses seek & disengage behaviours
+         * Seek when player is far and disengage when player is within range
+         */
         Vector2 desiredVelocity = (target - (Vector2)transform.position).normalized * maxSpeed;
         if (Vector2.Distance(target, transform.position) <= distanceFromPlayer)
         {

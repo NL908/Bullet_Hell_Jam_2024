@@ -162,13 +162,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 977d3b1e9c919eb44ad045217d1f96ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnRate: 0.5
-  speed: 0.5
+  maxSpeed: 1
+  steerForce: 1
   acceleration: 0.5
+  deceleration: 0.5
   direction: {x: 0, y: 0}
   hp: 5
   maxHp: 5
   score: 5
+  distanceFromPlayer: 6
 --- !u!114 &187709760368610544
 MonoBehaviour:
   m_ObjectHideFlags: 0
