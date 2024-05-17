@@ -21,21 +21,14 @@ public class ForwardExplodeProjectile : ForwardProjectile
     }
 
     void Explode() {
+        ParticleSystem particleInstance = Instantiate(particle, transform.position, transform.rotation);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyLayer);
         foreach (Collider2D hit in colliders) {
             Debug.Log("*Gasp* The enemy "+hit.name+" caught in explosion");
             Enemy enemy = hit.GetComponent<Enemy>();
             enemy.OnHit(explosionDamage);
-            ParticleSystem particleInstance = Instantiate(particle, transform.position, transform.rotation);
-            StartCoroutine(DestroyParticle(1, particleInstance));
         }
         
-    }
-
-    private IEnumerator DestroyParticle(float delay, Object particle)
-    {
-        yield return new WaitForSeconds(delay);
-        Destroy(particle);
     }
 
     void OnDrawGizmos()
