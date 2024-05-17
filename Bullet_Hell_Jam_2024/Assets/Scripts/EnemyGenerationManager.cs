@@ -9,17 +9,19 @@ public class EnemyGenerationManager : MonoBehaviour
 
     [SerializeField]
     private float enemySpawnBufferDistance;
-    //[SerializeField]
-    //private float enemySpawnRadius;
     [SerializeField]
-    private float enemySpawnRandomArcDegree;
-    private float enemySpawnRandomArcRadiant;
+    private float enemySpawnRadius;
+    [SerializeField]
+    private float enemyGroupSpawnDelay = 0.1f;
 
     [SerializeField]
     public EnemyGenerationProgressGroup[] progressGroups;
 
     // Passive generation rate. Unit in per second
     public float passiveGenerationRate = 1f;
+
+    [SerializeField]
+    private Vector2 arenaSize;
 
     private void Awake()
     {
@@ -28,7 +30,6 @@ public class EnemyGenerationManager : MonoBehaviour
 
     private void Start()
     {
-        enemySpawnRandomArcRadiant = Mathf.Deg2Rad * enemySpawnRandomArcDegree;
         InvokeRepeating("CheckEnemySpawns", 0, 0.5f);
     }
 
@@ -78,29 +79,19 @@ public class EnemyGenerationManager : MonoBehaviour
     */
     private IEnumerator SpawnEnemies(GameObject enemyPrefab, int num)
     {
-        // A random degree for the enemy to spawn
-        float theta = Random.value * 2 * Mathf.PI;
-        // TODO: Get Arena radius
-        float x = Mathf.Cos(theta);
-        float y = Mathf.Sin(theta);
-        Vector2 groupSpawnPoint =
-            new Vector2(x * (enemySpawnBufferDistance),
-            y * (enemySpawnBufferDistance));
-        
+        // A random point on the edge of the arena
+        Vector2 groupSpawnPoint = Utils.RandomPonitOnRectEdge(arenaSize.x, arenaSize.y);
+        groupSpawnPoint += (groupSpawnPoint.normalized * (enemySpawnBufferDistance + enemySpawnRadius));
+
         // Spawn enemies and wait between each spawn
         for (int i = 0; i < num; i ++)
         {
-            /*float enemyGroupSpawnTheta = enemySpawnRandomArcRadiant * (Random.value * 2 - 1);
-            Vector2 spawnPoint = new Vector2(
-                Mathf.Cos(enemyGroupSpawnTheta) + groupSpawnPoint.x,
-                Mathf.Sin(enemyGroupSpawnTheta) + groupSpawnPoint.y
-                );
-            */
+            Vector2 spawnPoint = groupSpawnPoint + Random.insideUnitCircle * enemySpawnRadius;
             // TODO: For debugging purposes, spawm them all at groupSpawmPoint for now
-            Vector2 spawnPoint = groupSpawnPoint;
+            //Vector2 spawnPoint = groupSpawnPoint;
             Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
             // TODO: Change this with a SerializeField variable
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(enemyGroupSpawnDelay);
         }
     }
 }

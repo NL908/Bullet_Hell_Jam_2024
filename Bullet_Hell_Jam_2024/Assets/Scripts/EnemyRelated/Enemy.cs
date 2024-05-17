@@ -20,7 +20,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float steerForce;
     [SerializeField] protected float acceleration;
     [SerializeField] protected float deceleration;
-    [SerializeField] protected Vector2 direction;
+    [SerializeField] protected bool isAlwaysFacePlayer = false;
 
     // Stats
     [SerializeField] protected float hp;
@@ -48,6 +48,7 @@ public abstract class Enemy : MonoBehaviour
     protected void FixedUpdate()
     {
         CalcAndUpdateVelocity(Player.instance.transform.position);
+        
     }
 
     #region Hit & Death
@@ -77,6 +78,7 @@ public abstract class Enemy : MonoBehaviour
     }
     #endregion
 
+    #region Locomotion
     #region Steering Behaviour
     protected abstract Vector2 CalcSteering(Vector2 target);
 
@@ -92,7 +94,6 @@ public abstract class Enemy : MonoBehaviour
             Mathf.Max(_rb.velocity.magnitude - deceleration * Time.deltaTime, 0f),
             Mathf.Min(_rb.velocity.magnitude + acceleration * Time.deltaTime, maxSpeed));
 
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, newVelocity);
         _rb.velocity = newVelocity;
     }
 
@@ -106,6 +107,19 @@ public abstract class Enemy : MonoBehaviour
         if (sm > (double)max * (double)max) return v.normalized * max;
         else if (sm < (double)min * (double)min) return v.normalized * min;
         return v;
+    }
+    #endregion
+    protected void UpdateRotation()
+    {
+        if (!isAlwaysFacePlayer)
+        {
+            // Rotation is faced towards the player
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, Player.instance.transform.position);
+        }
+        else
+        {
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, _rb.velocity);
+        }
     }
     #endregion
 
