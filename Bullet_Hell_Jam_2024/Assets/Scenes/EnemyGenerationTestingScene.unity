@@ -330,6 +330,10 @@ PrefabInstance:
       value: EnemyGenerationManager
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].fireProgressRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].easyProgress.enemySpawnNumber
       value: 0
       objectReference: {fileID: 0}

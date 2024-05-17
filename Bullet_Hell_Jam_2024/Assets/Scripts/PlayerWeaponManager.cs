@@ -30,8 +30,10 @@ public class PlayerWeaponManager : MonoBehaviour
         weaponTimer -= Time.deltaTime;
         if (inputHandler.fireButton) {
             if (weaponTimer <= 0) {
+                // Fire current selected weapon
                 currentEmitter.EmitProjectile();
                 weaponTimer = currentEmitter.emitInterval;
+                EnemyGenerationManager.instance.UpdateWeaponFire(selectedWeaponIndex);
             }
         }
     }

@@ -31,7 +31,9 @@ public class EnemyGenerationManager : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("CheckEnemySpawns", 0, 0.5f);
+        // Check enemy spawn per 0.1 second. This saves about 0.0005 seconds, very efficient!
+        // Totally can comment out this and use the one in Update()
+        InvokeRepeating("CheckEnemySpawns", 0, 0.1f);
         _arenaSize = GameMaster.instance.arenaSize;
     }
 
@@ -39,6 +41,7 @@ public class EnemyGenerationManager : MonoBehaviour
     {
         UpdatePassiveGeneration();
         UpdateSelectedWeaponGeneration();
+        //CheckEnemySpawns();
     }
 
     #region Generation Progress Update methods
