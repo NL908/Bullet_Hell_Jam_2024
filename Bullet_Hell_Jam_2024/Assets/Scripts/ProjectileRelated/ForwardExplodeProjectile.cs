@@ -8,17 +8,7 @@ public class ForwardExplodeProjectile : ForwardProjectile
     [SerializeField] ParticleSystem particle;
     [SerializeField] int explosionDamage = 50;
     [SerializeField] float explosionRadius = 2f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     // Method called when another collider enters the trigger
     void OnTriggerEnter2D(Collider2D other)
     {

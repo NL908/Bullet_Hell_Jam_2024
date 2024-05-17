@@ -263,7 +263,8 @@ GameObject:
   - component: {fileID: 940106509611639313}
   - component: {fileID: 6206231632138177944}
   - component: {fileID: 4707685349393941363}
-  - component: {fileID: 6136413538323309545}
+  - component: {fileID: -5275710320393263863}
+  - component: {fileID: 1367706846154069286}
   m_Layer: 0
   m_Name: RocketProjectile
   m_TagString: Untagged
@@ -376,7 +377,34 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
---- !u!114 &6136413538323309545
+--- !u!50 &-5275710320393263863
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572358134678021986}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1367706846154069286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,4 +425,4 @@ MonoBehaviour:
     m_Bits: 128
   particle: {fileID: 2640199646894417530, guid: 5df19ea9aecf7984690af8453ec6311a, type: 3}
   explosionDamage: 50
-  explosionRadius: 1.4
+  explosionRadius: 2

@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f529ae5a6db117644a68a9835c9b4d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6136413538323309545, guid: b342c2c3e8006fb47bba28a1e09007d7, type: 3}
+  projectilePrefab: {fileID: 1367706846154069286, guid: b342c2c3e8006fb47bba28a1e09007d7, type: 3}
   emitInterval: 0.7
   isActive: 0
   randomOffsetRange: 0

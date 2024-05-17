@@ -14,6 +14,16 @@ public abstract class Projectile : MonoBehaviour
     [SerializeField] protected bool isEnemy = true;
     [SerializeField] protected bool destroyOnHit = true;
 
+    // Components
+    protected Rigidbody2D _rb;
+    protected Collider2D _collider;
+
+    protected virtual void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        _collider = GetComponent<Collider2D>();
+    }
+
     protected void OnBecameInvisible()
     {
         // Since the game is in fixed arena with fixed camera position & angle
