@@ -50,6 +50,33 @@ public abstract class Enemy : MonoBehaviour
         CalcAndUpdateVelocity(Player.instance.transform.position);
     }
 
+    #region Hit & Death
+    // When the enemy is hit by something
+    protected void OnHit(float damageTaken)
+    {
+        // HP deduction
+        hp = Mathf.Clamp(hp - damageTaken, 0, maxHp);
+        if (hp <= 0)
+        {
+            OnDeath();
+        }
+
+        // Play hit sound
+        // Play hit animation (if we have one)
+    }
+
+    // When the enemy dies
+    protected void OnDeath()
+    {
+        // disable hitbox
+        // add score
+        // play some dead sound
+        // do some cool animation
+        // throw it into the void
+        Destroy(gameObject);
+    }
+    #endregion
+
     #region Steering Behaviour
     protected abstract Vector2 CalcSteering(Vector2 target);
 
@@ -79,6 +106,16 @@ public abstract class Enemy : MonoBehaviour
         if (sm > (double)max * (double)max) return v.normalized * max;
         else if (sm < (double)min * (double)min) return v.normalized * min;
         return v;
+    }
+    #endregion
+
+    #region Emitter Control
+    protected void SetEmitters(bool active)
+    {
+        foreach(ProjectileEmitter emmitter in _emitters)
+        {
+            emmitter.isActive = active;
+        }
     }
     #endregion
 }
