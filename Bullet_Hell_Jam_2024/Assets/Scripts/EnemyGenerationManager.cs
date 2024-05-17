@@ -19,6 +19,8 @@ public class EnemyGenerationManager : MonoBehaviour
 
     // Passive generation rate. Unit in per second
     public float passiveGenerationRate = 1f;
+    // Additional generation rate for the EnemyGenerationProgressGroup corresponding to the current selected weapon
+    public float selectedGenerationRate = 1f;
 
     [SerializeField]
     private Vector2 arenaSize;
@@ -36,8 +38,10 @@ public class EnemyGenerationManager : MonoBehaviour
     private void Update()
     {
         UpdatePassiveGeneration();
+        UpdateSelectedWeaponGeneration();
     }
 
+    #region Generation Progress Update methods
     private void UpdatePassiveGeneration()
     {
         float deltaTime = Time.deltaTime;
@@ -47,12 +51,20 @@ public class EnemyGenerationManager : MonoBehaviour
         }
     }
 
+    private void UpdateSelectedWeaponGeneration()
+    {
+        float deltaTime = Time.deltaTime;
+        int currSelectedWeaponIndex = PlayerWeaponManager.instance.selectedWeaponIndex;
+        progressGroups[currSelectedWeaponIndex].UpdateProgress(selectedGenerationRate * deltaTime);
+    }
+
     // Update every progress in a progress group with the index
     // Called this when fire weapon?
     public void UpdateWeaponFire(int index)
     {
         progressGroups[index].UpdateProgress(progressGroups[index].fireProgressRate);
     }
+    #endregion
 
     // Check all GenerationProgress in progressGroups and spawn enemies that has a full progression
     private void CheckEnemySpawns()

@@ -15,7 +15,9 @@ public class ShooterEnemy : Enemy
          * Seek when player is far and disengage when player is within range
          */
         Vector2 desiredVelocity = (target - (Vector2)transform.position).normalized * maxSpeed;
-        if (Vector2.Distance(target, transform.position) <= distanceFromPlayer)
+        // Moveaway from the player if player is too close and within arena size
+        // TODO: Add is within arena check
+        if (Vector2.Distance(target, transform.position) <= distanceFromPlayer) 
         {
             desiredVelocity = -desiredVelocity;
         }

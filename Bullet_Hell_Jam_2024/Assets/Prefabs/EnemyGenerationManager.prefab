@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4805628181173055521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8836866910078156085}
+  - component: {fileID: 4921803604699713245}
+  m_Layer: 0
+  m_Name: EnemyGenerationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8836866910078156085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4805628181173055521}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4921803604699713245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4805628181173055521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba3b9d62079e944396afe3ced781354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpawnBufferDistance: 0.5
+  enemySpawnRadius: 1.5
+  enemyGroupSpawnDelay: 0.1
+  progressGroups:
+  - easyProgress:
+      currentProgress: 0
+      maxProgress: 3
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
+      enemySpawnNumber: 3
+    mediumProgress:
+      currentProgress: 0
+      maxProgress: 10
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
+      enemySpawnNumber: 8
+    hardProgress:
+      currentProgress: 0
+      maxProgress: 20
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
+      enemySpawnNumber: 20
+    fireProgressRate: 0
+  - easyProgress:
+      currentProgress: 0
+      maxProgress: 3
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
+      enemySpawnNumber: 1
+    mediumProgress:
+      currentProgress: 0
+      maxProgress: 10
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
+      enemySpawnNumber: 3
+    hardProgress:
+      currentProgress: 0
+      maxProgress: 20
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
+      enemySpawnNumber: 6
+    fireProgressRate: 0
+  - easyProgress:
+      currentProgress: 0
+      maxProgress: 3
+      enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      enemySpawnNumber: 1
+    mediumProgress:
+      currentProgress: 0
+      maxProgress: 10
+      enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      enemySpawnNumber: 3
+    hardProgress:
+      currentProgress: 0
+      maxProgress: 20
+      enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      enemySpawnNumber: 5
+    fireProgressRate: 0
+  passiveGenerationRate: 1
+  selectedGenerationRate: 1
+  arenaSize: {x: 18, y: 18}

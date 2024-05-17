@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9b76dc4c79af34d8365ba9df33efb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedWeaponIndex: 2
+  selectedWeaponIndex: 0
   emitters:
   - {fileID: 231292158752855333}
   - {fileID: 188094154057507258}

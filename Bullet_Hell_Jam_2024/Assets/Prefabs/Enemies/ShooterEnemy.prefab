@@ -166,11 +166,11 @@ MonoBehaviour:
   steerForce: 1
   acceleration: 3
   deceleration: 5
-  direction: {x: 0, y: 0}
+  isAlwaysFacePlayer: 0
   hp: 2
   maxHp: 2
   score: 2
-  distanceFromPlayer: 4
+  distanceFromPlayer: 8
 --- !u!114 &1067109672237233627
 MonoBehaviour:
   m_ObjectHideFlags: 0
