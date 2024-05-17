@@ -13,7 +13,6 @@ public class ForwardExplodeProjectile : ForwardProjectile
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!isEnemy && other.tag == "Enemy") {
-            Debug.Log("*Gasp* The enemy!");
             Explode();
             if (destroyOnHit) {
                 Destroy(gameObject);
@@ -25,6 +24,8 @@ public class ForwardExplodeProjectile : ForwardProjectile
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyLayer);
         foreach (Collider2D hit in colliders) {
             Debug.Log("*Gasp* The enemy "+hit.name+" caught in explosion");
+            Enemy enemy = hit.GetComponent<Enemy>();
+            enemy.OnHit(explosionDamage);
             ParticleSystem particleInstance = Instantiate(particle, transform.position, transform.rotation);
             StartCoroutine(DestroyParticle(1, particleInstance));
         }

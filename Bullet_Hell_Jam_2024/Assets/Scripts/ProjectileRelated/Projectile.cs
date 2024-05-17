@@ -43,7 +43,10 @@ public abstract class Projectile : MonoBehaviour
         }
 
         else if (!isEnemy && other.tag == "Enemy") {
-            Debug.Log("*Gasp* The enemy!");
+            // Player's bullet hit enemy
+            //Debug.Log("*Gasp* The enemy!");
+            Enemy enemy = other.GetComponent<Enemy>();
+            enemy.OnHit(damageValue);
             if (destroyOnHit) {
                 Destroy(gameObject);
             }

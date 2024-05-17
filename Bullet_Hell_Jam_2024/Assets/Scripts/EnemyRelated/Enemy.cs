@@ -56,7 +56,7 @@ public abstract class Enemy : MonoBehaviour
 
     #region Hit & Death
     // When the enemy is hit by something
-    protected void OnHit(float damageTaken)
+    public void OnHit(float damageTaken)
     {
         // HP deduction
         hp = Mathf.Clamp(hp - damageTaken, 0, maxHp);
