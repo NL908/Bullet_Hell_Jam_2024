@@ -22,8 +22,7 @@ public class EnemyGenerationManager : MonoBehaviour
     // Additional generation rate for the EnemyGenerationProgressGroup corresponding to the current selected weapon
     public float selectedGenerationRate = 1f;
 
-    [SerializeField]
-    private Vector2 arenaSize;
+    private Vector2 _arenaSize;
 
     private void Awake()
     {
@@ -33,6 +32,7 @@ public class EnemyGenerationManager : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("CheckEnemySpawns", 0, 0.5f);
+        _arenaSize = GameMaster.instance.arenaSize;
     }
 
     private void Update()
@@ -75,7 +75,6 @@ public class EnemyGenerationManager : MonoBehaviour
         {
             enemyGameObjects = enemyGameObjects.Concat(progressGroup.CheckIsProgressComplete()).ToList();
         }
-        Debug.Log(enemyGameObjects.Count());
         // Call SpawnEnemies for each enemy prefab and number of enemies to spawn in a group
         foreach ((GameObject enemy, int num) in enemyGameObjects)
         {
@@ -92,7 +91,7 @@ public class EnemyGenerationManager : MonoBehaviour
     private IEnumerator SpawnEnemies(GameObject enemyPrefab, int num)
     {
         // A random point on the edge of the arena
-        Vector2 groupSpawnPoint = Utils.RandomPonitOnRectEdge(arenaSize.x, arenaSize.y);
+        Vector2 groupSpawnPoint = Utils.RandomPonitOnRectEdge(_arenaSize.x, _arenaSize.y);
         groupSpawnPoint += (groupSpawnPoint.normalized * (enemySpawnBufferDistance + enemySpawnRadius));
 
         // Spawn enemies and wait between each spawn
@@ -101,7 +100,7 @@ public class EnemyGenerationManager : MonoBehaviour
             Vector2 spawnPoint = groupSpawnPoint + Random.insideUnitCircle * enemySpawnRadius;
             // TODO: For debugging purposes, spawm them all at groupSpawmPoint for now
             //Vector2 spawnPoint = groupSpawnPoint;
-            Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
+            Instantiate(enemyPrefab, spawnPoint, Quaternion.identity, transform);
             // TODO: Change this with a SerializeField variable
             yield return new WaitForSeconds(enemyGroupSpawnDelay);
         }

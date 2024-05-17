@@ -16,8 +16,7 @@ public class ShooterEnemy : Enemy
          */
         Vector2 desiredVelocity = (target - (Vector2)transform.position).normalized * maxSpeed;
         // Moveaway from the player if player is too close and within arena size
-        // TODO: Add is within arena check
-        if (Vector2.Distance(target, transform.position) <= distanceFromPlayer) 
+        if (Vector2.Distance(target, transform.position) <= distanceFromPlayer && isWithinArena()) 
         {
             desiredVelocity = -desiredVelocity;
         }

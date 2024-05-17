@@ -37,18 +37,21 @@ public abstract class Enemy : MonoBehaviour
     // Behavior
     protected ProjectileEmitter[] _emitters; // GetComponents will generate it in the order they are linked in Inspector
 
+    private Vector2 _arenaSize;
+
     /* Unity Method */
     protected virtual void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
         _emitters = GetComponents<ProjectileEmitter>();
+        _arenaSize = GameMaster.instance.arenaSize;
     }
 
     protected void FixedUpdate()
     {
         CalcAndUpdateVelocity(Player.instance.transform.position);
-        
+        UpdateRotation();
     }
 
     #region Hit & Death
@@ -111,15 +114,25 @@ public abstract class Enemy : MonoBehaviour
     #endregion
     protected void UpdateRotation()
     {
-        if (!isAlwaysFacePlayer)
+        if (isAlwaysFacePlayer)
         {
             // Rotation is faced towards the player
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, Player.instance.transform.position);
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, Player.instance.transform.position - transform.position);
         }
         else
         {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, _rb.velocity);
         }
+    }
+
+    protected bool isWithinArena()
+    {
+        float arenaX = _arenaSize.x - 1;
+        float arenaY = _arenaSize.y - 1;
+        float x = transform.position.x;
+        float y = transform.position.y;
+
+        return (x < arenaX / 2 && x > -arenaX / 2 && y < arenaY / 2 && y > -arenaY / 2);
     }
     #endregion
 

@@ -16,8 +16,7 @@ public class TankEnemy: Enemy
         Vector2 desiredVelocity = (target - (Vector2)transform.position).normalized * maxSpeed;
         Vector2 steering;
         // Stop moving if player is close AND within arena
-        // TODO: Add is within arena check
-        if (Vector2.Distance(target, transform.position) <= distanceFromPlayer)
+        if (Vector2.Distance(target, transform.position) <= distanceFromPlayer && isWithinArena())
         {
             steering = -_rb.velocity;
         }

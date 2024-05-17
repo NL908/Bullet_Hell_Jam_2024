@@ -178,7 +178,7 @@ MonoBehaviour:
   steerForce: 4
   acceleration: 1
   deceleration: 0
-  isAlwaysFacePlayer: 1
+  isAlwaysFacePlayer: 0
   hp: 1
   maxHp: 1
   score: 1
