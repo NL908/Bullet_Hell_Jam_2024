@@ -12,10 +12,12 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] Image[] lifes;
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
+    [SerializeField] GameObject gameOverScreen;
 
     private void Awake()
     {
         instance = this;
+        gameOverScreen.SetActive(false);
     }
 
     /// <summary>
@@ -83,5 +85,19 @@ public class CanvasScript : MonoBehaviour
                 Debug.LogError("CanvasScript: No existing weaponIndex");
                 break;
         }
+    }
+    /// <summary>
+    /// Display the result screen after game over
+    /// </summary>
+    public void ShowResultScreen()
+    {
+        gameOverScreen.SetActive(true);
+    }
+
+    /// <summary>
+    /// Called when the retry button in result screen is clicked
+    /// </summary>
+    public void OnClickRetry() {
+        GameMaster.instance.Restart();
     }
 }
