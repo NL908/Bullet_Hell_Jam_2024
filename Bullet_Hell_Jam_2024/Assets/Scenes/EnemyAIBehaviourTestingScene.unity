@@ -196,14 +196,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameMaster
       objectReference: {fileID: 0}
-    - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
-      propertyPath: arenaSize.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
-      propertyPath: arenaSize.y
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7267706738727294767, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -432,50 +424,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
---- !u!1 &819490128 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-  m_PrefabInstance: {fileID: 1679894481}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &819490134 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4911692423784124438, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-  m_PrefabInstance: {fileID: 1679894481}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &819490135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819490128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de95a895feb50d2428f425df2e3881d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 8589364467177450205, guid: f58255ab6303c0f4db970f7a39ad61c7, type: 3}
-  emitInterval: 1.5
-  isActive: 0
-  randomOffsetRange: 0
---- !u!114 &819490136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819490128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e490e40f397c0954098bbc13070090e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 2720050129732264819, guid: 87e6e4f57c2a6cf4891333742adfc982, type: 3}
-  emitInterval: 2.5
-  isActive: 0
-  numberOfProjectiles: 3
-  angleSpread: 240
-  targetPlayer: 1
 --- !u!1001 &852344179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -682,10 +630,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1067109672237233627, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
-      propertyPath: isActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4911692423784124438, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.03
@@ -1475,18 +1419,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 39608928942182581, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      propertyPath: distanceFromPlayer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 39608928942182581, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      propertyPath: fanEmitterAngularSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 187709760368610544, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4911692423784124438, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.79
@@ -1531,20 +1463,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TankEnemy
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 187709760368610544, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+    - target: {fileID: 9159428173073901723, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      propertyPath: emitInterval
+      value: 0.8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4911692423784124438, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1881324415}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 819490136}
-    - targetCorrespondingSourceObject: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 819490135}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
 --- !u!1001 &1712162518
 PrefabInstance:
@@ -1664,56 +1590,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
---- !u!1 &1881324414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1881324415}
-  - component: {fileID: 1881324416}
-  m_Layer: 7
-  m_Name: FanEmitter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1881324415
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881324414}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 819490134}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1881324416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881324414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e490e40f397c0954098bbc13070090e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 146876333254039768, guid: 222da5521fd86994a86f8f036f01212a, type: 3}
-  emitInterval: 0.4
-  isActive: 1
-  numberOfProjectiles: 4
-  angleSpread: 360
-  targetPlayer: 0
 --- !u!1001 &2133879163
 PrefabInstance:
   m_ObjectHideFlags: 0

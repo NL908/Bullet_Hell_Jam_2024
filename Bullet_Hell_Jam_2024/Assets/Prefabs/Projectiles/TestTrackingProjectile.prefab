@@ -139,7 +139,7 @@ MonoBehaviour:
   isEnemy: 1
   destroyOnHit: 1
   rotateSpeed: 150
-  trackDuration: 3
+  trackDuration: 2
 --- !u!50 &6659336275661727349
 Rigidbody2D:
   serializedVersion: 4
