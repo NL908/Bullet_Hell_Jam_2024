@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,21 +9,39 @@ public class GameMaster : MonoBehaviour
 
     public Vector2 arenaSize;
 
-    public float score;
+    private float score;
+    public float Score
+    {
+        get { return score; }
+        set
+        {
+            score = value;
+            try
+            {
+                CanvasScript.instance.UpdateScore((int)score);
+            }
+            catch (Exception e) { Debug.LogError("Score UI update error with: " + e.Message); }
+        }
+    }
 
     private void Awake()
     {
         instance = this;
     }
 
+    private void Start()
+    {
+        Score = 0;
+    }
+
     public void StartGame()
     {
         EnemyGenerationManager.instance.isActive = true;
-        score = 0;
+        Score = 0;
     }
 
     public void GameOver()
     {
-
+        Debug.Log("Game over");
     }
 }

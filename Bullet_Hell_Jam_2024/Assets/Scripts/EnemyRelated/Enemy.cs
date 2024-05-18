@@ -78,7 +78,7 @@ public abstract class Enemy : MonoBehaviour
     {
         // disable hitbox
         // add score
-        GameMaster.instance.score += score;
+        GameMaster.instance.Score += score;
         // play some dead sound
         // do some cool animation
         // throw it into the void
