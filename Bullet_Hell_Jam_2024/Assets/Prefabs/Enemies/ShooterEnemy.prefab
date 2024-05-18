@@ -184,6 +184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3021799087116300858, guid: 81519447e46c87149afe5239c5af5621, type: 3}
-  emitInterval: 1
+  emitInterval: 1.3
   isActive: 1
   randomOffsetRange: 1

@@ -1464,8 +1464,8 @@ PrefabInstance:
       value: TankEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 9159428173073901723, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      propertyPath: emitInterval
-      value: 0.8
+      propertyPath: isActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

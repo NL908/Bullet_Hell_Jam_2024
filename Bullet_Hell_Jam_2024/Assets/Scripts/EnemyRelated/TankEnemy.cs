@@ -24,6 +24,12 @@ public class TankEnemy: Enemy
         fanEmitterRotation = fanEmitter.transform.rotation;
     }
 
+    void Update() {
+        if (isWithinArena()) {
+            fanEmitter.isActive = true;
+        }
+    }
+
     /// <summary>
     /// Overriding UpdateRotation to rotate fan emitter independant of parent's rotation
     /// </summary>
@@ -41,7 +47,6 @@ public class TankEnemy: Enemy
         }
         fanEmitterAngles.z += Time.deltaTime * fanEmitterAngularSpeed;
         fanEmitter.transform.rotation = Quaternion.Euler(fanEmitterAngles);
-        Debug.Log(fanEmitterAngles);
     }
 
     protected override Vector2 CalcSteering(Vector2 target)

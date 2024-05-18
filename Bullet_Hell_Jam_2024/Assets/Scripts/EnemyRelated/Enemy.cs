@@ -46,11 +46,14 @@ public abstract class Enemy : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         _emitters = GetComponents<ProjectileEmitter>();
         _arenaSize = GameMaster.instance.arenaSize;
-        SetEmitters(true);
     }
 
     protected void FixedUpdate()
     {
+        // Turn on emitters if in arena
+        if (isWithinArena()) {
+            SetEmitters(true);
+        }
         CalcAndUpdateVelocity(Player.instance.transform.position);
         UpdateRotation();
     }
