@@ -53,8 +53,8 @@ public class EnemyGenerationProgressGroup
     {
         float[] percentageList = {
             easyProgress.GetProgressPercentage(),
-            easyProgress.GetProgressPercentage(),
-            easyProgress.GetProgressPercentage()
+            mediumProgress.GetProgressPercentage(),
+            hardProgress.GetProgressPercentage()
         };
         return percentageList;
     }
