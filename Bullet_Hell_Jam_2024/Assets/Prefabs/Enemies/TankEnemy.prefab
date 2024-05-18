@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 146876333254039768, guid: 222da5521fd86994a86f8f036f01212a, type: 3}
   emitInterval: 0.8
-  isActive: 1
+  isActive: 0
   numberOfProjectiles: 4
   angleSpread: 360
   targetPlayer: 0
@@ -234,6 +234,7 @@ MonoBehaviour:
   score: 5
   distanceFromPlayer: 8
   fanEmitterAngularSpeed: 25
+  fanEmitter: {fileID: 9159428173073901723}
 --- !u!114 &5436893597540517756
 MonoBehaviour:
   m_ObjectHideFlags: 0

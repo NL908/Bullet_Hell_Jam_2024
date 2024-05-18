@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -9,9 +10,8 @@ public class TankEnemy: Enemy
     [SerializeField]
     private float distanceFromPlayer = 4f;
     [SerializeField] float fanEmitterAngularSpeed = 50f;
-
+    [SerializeField] FanProjectileEmitter fanEmitter;
     // Components
-    FanProjectileEmitter fanEmitter;
     // This is fan's rotation independent of parent's rotation
     Vector3 fanEmitterAngles;
     Quaternion fanEmitterRotation;
@@ -19,7 +19,6 @@ public class TankEnemy: Enemy
     protected override void Start()
     {
         base.Start();
-        fanEmitter = GetComponentInChildren<FanProjectileEmitter>();
         fanEmitterAngles = Vector3.zero;
         fanEmitterRotation = fanEmitter.transform.rotation;
     }
