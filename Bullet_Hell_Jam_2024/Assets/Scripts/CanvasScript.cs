@@ -10,7 +10,8 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] Image[] lifes;
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
-    
+    [SerializeField] Image[][] weaponGauges;
+
     /// <summary>
     ///  Update score UI to a new value
     /// </summary>
@@ -43,9 +44,10 @@ public class CanvasScript : MonoBehaviour
             lifes[i].enabled = i < left;
         }
     }
-    [SerializeField] Image[] weapon1gauges;
-    public void UpdateWeapon1Gauge(float gauge1, float gauge2, float gauge3)
+    public void UpdateWeapon1Gauge(int weaponIndex, float gauge1, float gauge2, float gauge3)
     {
-        weapon1gauges[0].fillAmount = gauge1;
+        weaponGauges[weaponIndex][0].fillAmount = gauge1;
+        weaponGauges[weaponIndex][1].fillAmount = gauge2;
+        weaponGauges[weaponIndex][2].fillAmount = gauge3;
     }
 }
