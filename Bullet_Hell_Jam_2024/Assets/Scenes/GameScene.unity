@@ -342,6 +342,8 @@ MonoBehaviour:
   - {fileID: 2009963322}
   score: {fileID: 742082630}
   time: {fileID: 519866639}
+  weapon1gauges:
+  - {fileID: 916804318}
 --- !u!114 &160830651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,7 +1092,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 100, y: 20}
+  m_SizeDelta: {x: 200, y: 20}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &916804318
 MonoBehaviour:
@@ -1113,10 +1115,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
