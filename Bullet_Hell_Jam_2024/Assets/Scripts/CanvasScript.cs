@@ -13,6 +13,7 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
     [SerializeField] GameObject gameOverScreen;
+    [SerializeField] Image[] weaponSelections;
 
     private void Awake()
     {
@@ -37,7 +38,7 @@ public class CanvasScript : MonoBehaviour
         float sec = newTime % 60;
         float min = Mathf.Floor(newTime / 60);
         Debug.Log("Parsed: " + min.ToString() + " " + sec.ToString());
-        string combineTime = min.ToString().PadLeft(2, '0') + ':' + sec.ToString().PadLeft(2, '0');
+        string combineTime = min.ToString().PadLeft(2, '0') + ':' + sec.ToString("00.00");
         time.text = combineTime;
     }
     /// <summary>
@@ -82,7 +83,7 @@ public class CanvasScript : MonoBehaviour
                 weapon3Gauges[2].fillAmount = gauge3;
                 break;
             default:
-                Debug.LogError("CanvasScript: No existing weaponIndex");
+                Debug.LogError("CanvasScript: Bad weaponIndex");
                 break;
         }
     }
@@ -99,5 +100,23 @@ public class CanvasScript : MonoBehaviour
     /// </summary>
     public void OnClickRetry() {
         GameMaster.instance.Restart();
+    }
+    /// <summary>
+    /// Update selection UI for weapon
+    /// </summary>
+    /// <param name="weaponIndex">Index of weapon, 0, 1, 2</param>
+    public void UpdateSelectedWeapon(int weaponIndex)
+    {
+        if (weaponIndex  >= 0 && weaponIndex < weaponSelections.Length)
+        {
+            for (int i = 0;i < weaponSelections.Length; ++i)
+            {
+                weaponSelections[i].enabled = i == weaponIndex;
+            }
+        }
+        else
+        {
+            Debug.LogError("CanvasScript: Bad weaponIndex");
+        }
     }
 }
