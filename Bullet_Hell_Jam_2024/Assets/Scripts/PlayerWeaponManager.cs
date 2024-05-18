@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class PlayerWeaponManager : MonoBehaviour
     void Start()
     {
         inputHandler = GetComponent<PlayerInputHandler>();
+        UpdateWeaponSelectionUI();
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class PlayerWeaponManager : MonoBehaviour
         if (selectedWeaponIndex >= emitters.Length) {
             selectedWeaponIndex = 0;
         }
+        UpdateWeaponSelectionUI();
     }
 
     public void SelectPrevWeapon()
@@ -55,5 +58,15 @@ public class PlayerWeaponManager : MonoBehaviour
         if (selectedWeaponIndex < 0) {
             selectedWeaponIndex = emitters.Length - 1;
         }
+        UpdateWeaponSelectionUI();
+    }
+
+    private void UpdateWeaponSelectionUI()
+    {
+        try
+        {
+            CanvasScript.instance.UpdateSelectedWeapon(selectedWeaponIndex);
+        }
+        catch (Exception e) { Debug.LogError("Select Weapon UI update error with: " + e.Message); }
     }
 }
