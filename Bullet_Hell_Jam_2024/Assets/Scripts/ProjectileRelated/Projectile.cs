@@ -36,7 +36,9 @@ public abstract class Projectile : MonoBehaviour
     {
         if (isEnemy && other.tag == "Player") {
             // Enemy bullet hit player
-            Debug.Log("Player take damage ouchie ouch");
+            // Debug.Log("Player take damage ouchie ouch");
+            Player player= other.GetComponent<Player>();
+            player.OnHit();
             if (destroyOnHit) {
                 Destroy(gameObject);
             }

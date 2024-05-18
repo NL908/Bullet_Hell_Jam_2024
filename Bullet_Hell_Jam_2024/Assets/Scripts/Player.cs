@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Player : MonoBehaviour
     PlayerLocomotion playerLocomotion;
 
     Rigidbody2D _rb;
+
+    // Stats
+    [SerializeField] protected float life;
+    [SerializeField] protected float maxLife;
 
     private void Awake()
     {
@@ -51,5 +56,24 @@ public class Player : MonoBehaviour
             Gizmos.color = Color.blue;
             Gizmos.DrawRay(transform.position, inputHandler.movementDirection * 3f);
         }
+    }
+
+    [ContextMenu("OnHit")]
+    public void OnHit()
+    {
+        life = Mathf.Clamp(life - 1, 0, maxLife);
+        if (life <= 0)
+        {
+            OnDeath();
+            Debug.Log("Player Death");
+        }
+    }
+
+    private void OnDeath()
+    {
+        // TODO: play transition
+        // Restart scene
+        Scene current = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(current.name);
     }
 }
