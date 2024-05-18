@@ -12,6 +12,7 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] Image[] lifes;
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
+    [SerializeField] TextMeshProUGUI gameOverScore;
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] Image[] weaponSelections;
 
@@ -93,6 +94,7 @@ public class CanvasScript : MonoBehaviour
     public void ShowResultScreen()
     {
         gameOverScreen.SetActive(true);
+        gameOverScore.text = score.text;
     }
 
     /// <summary>

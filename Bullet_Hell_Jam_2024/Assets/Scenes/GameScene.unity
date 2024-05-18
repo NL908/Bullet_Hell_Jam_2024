@@ -542,11 +542,12 @@ MonoBehaviour:
   - {fileID: 2009963322}
   score: {fileID: 742082630}
   time: {fileID: 519866639}
+  gameOverScore: {fileID: 459528413}
+  gameOverScreen: {fileID: 1703768982}
   weaponSelections:
   - {fileID: 1309621631}
   - {fileID: 2108523406}
   - {fileID: 446193218}
-  gameOverScreen: {fileID: 1703768982}
   weapon1Gauges:
   - {fileID: 916804318}
   - {fileID: 2135485093}
