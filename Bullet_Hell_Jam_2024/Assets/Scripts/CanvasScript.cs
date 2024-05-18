@@ -23,10 +23,10 @@ public class CanvasScript : MonoBehaviour
     /// Update the time UI to a new value
     /// </summary>
     /// <param name="newTime">Time in seconds</param>
-    public void UpdateTime(double newTime)
+    public void UpdateTime(float newTime)
     {
-        double sec = newTime % 60;
-        double min = Math.Floor(newTime / 60.0);
+        float sec = newTime % 60;
+        float min = Mathf.Floor(newTime / 60);
         Debug.Log("Parsed: " + min.ToString() + " " + sec.ToString());
         string combineTime = min.ToString().PadLeft(2, '0') + ':' + sec.ToString().PadLeft(2, '0');
         time.text = combineTime;
@@ -42,5 +42,10 @@ public class CanvasScript : MonoBehaviour
         {
             lifes[i].enabled = i < left;
         }
+    }
+    [SerializeField] Image[] weapon1gauges;
+    public void UpdateWeapon1Gauge(float gauge1, float gauge2, float gauge3)
+    {
+        weapon1gauges[0].fillAmount = gauge1;
     }
 }
