@@ -179,8 +179,8 @@ MonoBehaviour:
   acceleration: 1
   deceleration: 0
   isAlwaysFacePlayer: 0
-  hp: 50
-  maxHp: 50
+  hp: 40
+  maxHp: 0
   score: 1
   sinSpeed: 5
   sinDegree: 45

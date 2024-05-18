@@ -166,6 +166,6 @@ MonoBehaviour:
   acceleration: 0
   deceleration: 0
   isAlwaysFacePlayer: 0
-  hp: 50
-  maxHp: 50
+  hp: 300
+  maxHp: 300
   score: 0
