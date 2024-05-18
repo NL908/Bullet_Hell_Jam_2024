@@ -12,6 +12,7 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] Image[] lifes;
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
+    [SerializeField] Image[] weaponSelections;
 
     private void Awake()
     {
@@ -80,8 +81,27 @@ public class CanvasScript : MonoBehaviour
                 weapon3Gauges[2].fillAmount = gauge3;
                 break;
             default:
-                Debug.LogError("CanvasScript: No existing weaponIndex");
+                Debug.LogError("CanvasScript: Bad weaponIndex");
                 break;
+        }
+    }
+
+    /// <summary>
+    /// Update selection UI for weapon
+    /// </summary>
+    /// <param name="weaponIndex">Index of weapon, 0, 1, 2</param>
+    public void UpdateSelectedWeapon(int weaponIndex)
+    {
+        if (weaponIndex  >= 0 && weaponIndex < weaponSelections.Length)
+        {
+            for (int i = 0;i < weaponSelections.Length; ++i)
+            {
+                weaponSelections[i].enabled = i == weaponIndex;
+            }
+        }
+        else
+        {
+            Debug.LogError("CanvasScript: Bad weaponIndex");
         }
     }
 }
