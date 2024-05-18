@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,7 @@ public class EnemyGenerationManager : MonoBehaviour
         // Totally can comment out this and use the one in Update()
         //InvokeRepeating("CheckEnemySpawns", 0, 0.1f);
         _arenaSize = GameMaster.instance.arenaSize;
+        UpdateGenerationUI();
     }
 
     private void Update()
@@ -46,6 +48,7 @@ public class EnemyGenerationManager : MonoBehaviour
             UpdatePassiveGeneration();
             UpdateSelectedWeaponGeneration();
             CheckEnemySpawns();
+            UpdateGenerationUI();
         }
     }
 
@@ -72,6 +75,22 @@ public class EnemyGenerationManager : MonoBehaviour
     {
         if (isActive)
             progressGroups[index].UpdateProgress(progressGroups[index].fireProgressRate);
+    }
+
+    private void UpdateGenerationUI()
+    {
+        if (progressGroups.Length == 3)
+        {
+            try
+            {
+                float[][] percentageList = GetAllGenerationPercentage();
+                for (int i = 0; i < 3; i++)
+                {
+                    CanvasScript.instance.UpdateWeaponGauge(i, percentageList[i][0], percentageList[i][1], percentageList[i][2]);
+                }
+            }
+            catch (Exception e) { Debug.LogError("UI Update for EnemyGenerationManager error: " + e.Message);}
+        }
     }
     #endregion
 
@@ -117,7 +136,7 @@ public class EnemyGenerationManager : MonoBehaviour
         // Spawn enemies and wait between each spawn
         for (int i = 0; i < num; i ++)
         {
-            Vector2 spawnPoint = groupSpawnPoint + Random.insideUnitCircle * enemySpawnRadius;
+            Vector2 spawnPoint = groupSpawnPoint + UnityEngine.Random.insideUnitCircle * enemySpawnRadius;
             // TODO: For debugging purposes, spawm them all at groupSpawmPoint for now
             //Vector2 spawnPoint = groupSpawnPoint;
             Instantiate(enemyPrefab, spawnPoint, Quaternion.identity, transform);
