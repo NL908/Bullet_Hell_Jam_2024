@@ -12,13 +12,13 @@ public class Utils
         // 50% chance y is length or -length, x is some random value between -width and width
         if (Random.value > 0.5)
         {
-            x = width * (Random.value > 0.5 ? 1 : -1);
-            y = Random.Range(-length, length);
+            x = length * (Random.value > 0.5 ? 1 : -1);
+            y = Random.Range(-width, width);
         }
         else
         {
-            y = length * (Random.value > 0.5 ? 1 : -1);
-            x = Random.Range(-width, width);
+            y = width * (Random.value > 0.5 ? 1 : -1);
+            x = Random.Range(-length, length);
         }
         pos = new Vector2(x, y);
         return pos;
