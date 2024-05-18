@@ -21,6 +21,10 @@ public class CanvasTesting : MonoBehaviour
     void SetTime1Sec() { canvas.UpdateTime(1); }
     [ContextMenu("Time 59")]
     void SetTime59Sec() { canvas.UpdateTime(59); }
+    [ContextMenu("Time 0")]
+    void SetTime0Sec() { canvas.UpdateTime(0); }
+    [ContextMenu("Time 110.52134")]
+    void SetTime110DecimalSec() { canvas.UpdateTime(110.52134f); }
     [ContextMenu("Life 3")]
     void UpdateLife3() { canvas.UpdateLife(3); }
     [ContextMenu("Life 1")]

@@ -69,15 +69,13 @@ public class Player : MonoBehaviour
         if (life <= 0)
         {
             OnDeath();
-            Debug.Log("Player Death");
         }
     }
 
     private void OnDeath()
     {
-        // TODO: play transition
-        // Restart scene
-        Scene current = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(current.name);
+        Debug.Log("Player Death");
+        // Trigger gameover when player is ded
+        GameMaster.instance.GameOver();
     }
 }

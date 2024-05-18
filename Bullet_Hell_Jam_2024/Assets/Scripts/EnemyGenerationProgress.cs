@@ -37,7 +37,7 @@ public class EnemyGenerationProgress
     // Return the percenrage of the progress. 0 means it's empty and 1 means it should generate now.
     public float GetProgressPercentage()
     {
-        return maxProgress / currentProgress;
+        return currentProgress / maxProgress;
     }
 
     // return a tuple with enemy GameObject and the number of enemy spawn with it
