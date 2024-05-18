@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameMaster : MonoBehaviour
 {
     public static GameMaster instance;
+
     public Vector2 arenaSize;
+
+    public float score;
 
     private void Awake()
     {
@@ -15,6 +18,7 @@ public class GameMaster : MonoBehaviour
     public void StartGame()
     {
         EnemyGenerationManager.instance.isActive = true;
+        score = 0;
     }
 
     public void GameOver()

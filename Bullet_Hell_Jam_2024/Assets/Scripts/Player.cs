@@ -13,8 +13,8 @@ public class Player : MonoBehaviour
     Rigidbody2D _rb;
 
     // Stats
-    [SerializeField] protected float life;
-    [SerializeField] protected float maxLife;
+    [SerializeField] protected int life;
+    [SerializeField] protected int maxLife;
 
     private void Awake()
     {
@@ -62,6 +62,10 @@ public class Player : MonoBehaviour
     public void OnHit()
     {
         life = Mathf.Clamp(life - 1, 0, maxLife);
+        try
+        {
+            CanvasScript.instance.UpdateLife(life);
+        } catch { Debug.LogWarning("Canvas not loaded"); }
         if (life <= 0)
         {
             OnDeath();
