@@ -75,6 +75,7 @@ public class PlayerInputHandler : MonoBehaviour
 
         _fireAction.Enable();
 
+        inputActions.Player.SelectPreviousWeapon.Enable();
         inputActions.Player.SelectNextWeapon.Enable();
     }
 
@@ -87,6 +88,9 @@ public class PlayerInputHandler : MonoBehaviour
         _controllerAimDirectionAction.Disable();
 
         _fireAction.Disable();
+
+        inputActions.Player.SelectPreviousWeapon.Disable();
+        inputActions.Player.SelectNextWeapon.Disable();
     }
 
     public void TickInput()
