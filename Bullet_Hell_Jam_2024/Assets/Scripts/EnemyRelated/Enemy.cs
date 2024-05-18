@@ -46,6 +46,7 @@ public abstract class Enemy : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         _emitters = GetComponents<ProjectileEmitter>();
         _arenaSize = GameMaster.instance.arenaSize;
+        SetEmitters(true);
     }
 
     protected void FixedUpdate()
@@ -112,7 +113,7 @@ public abstract class Enemy : MonoBehaviour
         return v;
     }
     #endregion
-    protected void UpdateRotation()
+    protected virtual void UpdateRotation()
     {
         if (isAlwaysFacePlayer)
         {

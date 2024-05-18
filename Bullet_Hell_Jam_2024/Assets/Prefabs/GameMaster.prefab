@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6036b6115d2a8914f9e1d80f397422dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arenaSize: {x: 18, y: 18}
+  arenaSize: {x: 10, y: 10}

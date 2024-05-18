@@ -170,7 +170,7 @@ MonoBehaviour:
   hp: 2
   maxHp: 2
   score: 2
-  distanceFromPlayer: 8
+  distanceFromPlayer: 5
 --- !u!114 &1067109672237233627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de95a895feb50d2428f425df2e3881d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 146876333254039768, guid: 222da5521fd86994a86f8f036f01212a, type: 3}
-  emitInterval: 0.5
-  isActive: 0
-  randomOffsetRange: 3
+  projectilePrefab: {fileID: 3021799087116300858, guid: 81519447e46c87149afe5239c5af5621, type: 3}
+  emitInterval: 1
+  isActive: 1
+  randomOffsetRange: 1

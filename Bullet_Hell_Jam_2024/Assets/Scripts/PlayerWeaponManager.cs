@@ -33,7 +33,8 @@ public class PlayerWeaponManager : MonoBehaviour
                 // Fire current selected weapon
                 currentEmitter.EmitProjectile();
                 weaponTimer = currentEmitter.emitInterval;
-                EnemyGenerationManager.instance.UpdateWeaponFire(selectedWeaponIndex);
+                if (EnemyGenerationManager.instance)
+                    EnemyGenerationManager.instance.UpdateWeaponFire(selectedWeaponIndex);
             }
         }
     }
