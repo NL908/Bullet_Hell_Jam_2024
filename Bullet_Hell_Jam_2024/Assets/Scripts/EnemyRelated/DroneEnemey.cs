@@ -19,6 +19,17 @@ public class DroneEnemey : Enemy
         //randomSeed = Random.value * 2 * Mathf.PI;
     }
 
+    // Drone should explode themselves when they hit the player
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            // Explode, kaboom, deal damage to player
+            Player.instance.OnHit();
+            OnDeath();
+        }
+    }
+
     protected override Vector2 CalcSteering(Vector2 target)
     {
         /* Drone is using steering seek behaviour.

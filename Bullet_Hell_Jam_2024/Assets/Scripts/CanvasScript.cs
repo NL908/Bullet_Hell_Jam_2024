@@ -7,10 +7,17 @@ using UnityEngine.UI;
 
 public class CanvasScript : MonoBehaviour
 {
+    public static CanvasScript instance;
+
     [SerializeField] Image[] lifes;
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
-    
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     /// <summary>
     ///  Update score UI to a new value
     /// </summary>
