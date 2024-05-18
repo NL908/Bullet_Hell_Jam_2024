@@ -196,14 +196,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameMaster
       objectReference: {fileID: 0}
-    - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
-      propertyPath: arenaSize.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
-      propertyPath: arenaSize.y
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7267706738727294767, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -493,6 +485,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
+--- !u!114 &882168505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9159428173073901723, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+  m_PrefabInstance: {fileID: 1679894481}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e490e40f397c0954098bbc13070090e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &910182439
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,10 +684,6 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
       propertyPath: m_Name
       value: ShooterEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1431,6 +1430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 39608928942182581, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      propertyPath: fanEmitter
+      value: 
+      objectReference: {fileID: 882168505}
     - target: {fileID: 4911692423784124438, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.79
@@ -1474,6 +1477,10 @@ PrefabInstance:
     - target: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
       propertyPath: m_Name
       value: TankEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159428173073901723, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      propertyPath: isActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

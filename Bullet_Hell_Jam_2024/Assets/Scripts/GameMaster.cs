@@ -11,4 +11,14 @@ public class GameMaster : MonoBehaviour
     {
         instance = this;
     }
+
+    public void StartGame()
+    {
+        EnemyGenerationManager.instance.isActive = true;
+    }
+
+    public void GameOver()
+    {
+
+    }
 }

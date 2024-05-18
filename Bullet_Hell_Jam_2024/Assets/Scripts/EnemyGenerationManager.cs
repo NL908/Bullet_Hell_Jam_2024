@@ -70,9 +70,21 @@ public class EnemyGenerationManager : MonoBehaviour
     // Called this when fire weapon?
     public void UpdateWeaponFire(int index)
     {
-        progressGroups[index].UpdateProgress(progressGroups[index].fireProgressRate);
+        if (isActive)
+            progressGroups[index].UpdateProgress(progressGroups[index].fireProgressRate);
     }
     #endregion
+
+    public float[][] GetAllGenerationPercentage()
+    {
+        float[][] percentageLists;
+        percentageLists = new float[progressGroups.Length][];
+        for (int i = 0; i < progressGroups.Length; i++)
+        {
+            percentageLists[i] = progressGroups[i].GetGenerationPercentage();
+        }
+        return percentageLists;
+    }
 
     // Check all GenerationProgress in progressGroups and spawn enemies that has a full progression
     private void CheckEnemySpawns()

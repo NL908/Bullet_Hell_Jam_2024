@@ -50,13 +50,17 @@ public abstract class Enemy : MonoBehaviour
 
     protected void FixedUpdate()
     {
+        // Turn on emitters if in arena
+        if (isWithinArena()) {
+            SetEmitters(true);
+        }
         CalcAndUpdateVelocity(Player.instance.transform.position);
         UpdateRotation();
     }
 
     #region Hit & Death
     // When the enemy is hit by something
-    public void OnHit(float damageTaken)
+    public virtual void OnHit(float damageTaken)
     {
         // HP deduction
         hp = Mathf.Clamp(hp - damageTaken, 0, maxHp);
@@ -70,7 +74,7 @@ public abstract class Enemy : MonoBehaviour
     }
 
     // When the enemy dies
-    protected void OnDeath()
+    protected virtual void OnDeath()
     {
         // disable hitbox
         // add score
@@ -112,7 +116,7 @@ public abstract class Enemy : MonoBehaviour
         return v;
     }
     #endregion
-    protected void UpdateRotation()
+    protected virtual void UpdateRotation()
     {
         if (isAlwaysFacePlayer)
         {

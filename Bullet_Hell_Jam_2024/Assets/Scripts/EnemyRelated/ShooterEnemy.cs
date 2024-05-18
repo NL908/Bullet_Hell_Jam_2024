@@ -24,4 +24,5 @@ public class ShooterEnemy : Enemy
         Vector2 steering = (desiredVelocity - _rb.velocity);
         return steering;
     }
+
 }

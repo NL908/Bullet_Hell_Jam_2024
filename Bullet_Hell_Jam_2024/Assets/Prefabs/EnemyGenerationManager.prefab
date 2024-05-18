@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba3b9d62079e944396afe3ced781354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawnBufferDistance: 0.5
-  enemySpawnRadius: 1.5
+  isActive: 0
+  enemySpawnBufferDistance: 1.5
+  enemySpawnRadius: 1
   enemyGroupSpawnDelay: 0.1
   progressGroups:
   - easyProgress:
@@ -98,4 +99,3 @@ MonoBehaviour:
     fireProgressRate: 0
   passiveGenerationRate: 1
   selectedGenerationRate: 1
-  arenaSize: {x: 18, y: 18}
