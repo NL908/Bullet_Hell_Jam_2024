@@ -7,6 +7,8 @@ public class EnemyGenerationManager : MonoBehaviour
 {
     public static EnemyGenerationManager instance;
 
+    public bool isActive = false;
+
     [SerializeField]
     private float enemySpawnBufferDistance;
     [SerializeField]
@@ -33,15 +35,18 @@ public class EnemyGenerationManager : MonoBehaviour
     {
         // Check enemy spawn per 0.1 second. This saves about 0.0005 seconds, very efficient!
         // Totally can comment out this and use the one in Update()
-        InvokeRepeating("CheckEnemySpawns", 0, 0.1f);
+        //InvokeRepeating("CheckEnemySpawns", 0, 0.1f);
         _arenaSize = GameMaster.instance.arenaSize;
     }
 
     private void Update()
     {
-        UpdatePassiveGeneration();
-        UpdateSelectedWeaponGeneration();
-        //CheckEnemySpawns();
+        if (isActive)
+        {
+            UpdatePassiveGeneration();
+            UpdateSelectedWeaponGeneration();
+            CheckEnemySpawns();
+        }
     }
 
     #region Generation Progress Update methods
