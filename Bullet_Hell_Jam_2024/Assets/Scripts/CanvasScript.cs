@@ -50,10 +50,38 @@ public class CanvasScript : MonoBehaviour
             lifes[i].enabled = i < left;
         }
     }
-    public void UpdateWeapon1Gauge(int weaponIndex, float gauge1, float gauge2, float gauge3)
+    [SerializeField] Image[] weapon1Gauges;
+    [SerializeField] Image[] weapon2Gauges;
+    [SerializeField] Image[] weapon3Gauges;
+    /// <summary>
+    /// Update the enemey gauges UI of a particular weapon
+    /// </summary>
+    /// <param name="weaponIndex">Index of weapon, 0, 1, 2</param>
+    /// <param name="gauge1">Value of drone gauge 1, must be between 0 and 1 (inclusive)</param>
+    /// <param name="gauge2">Value of shooter gauge 1, must be between 0 and 1 (inclusive)</param>
+    /// <param name="gauge3">Value of tank gauge 1, must be between 0 and 1 (inclusive)</param>
+    public void UpdateWeaponGauge(int weaponIndex, float gauge1, float gauge2, float gauge3)
     {
-        weaponGauges[weaponIndex][0].fillAmount = gauge1;
-        weaponGauges[weaponIndex][1].fillAmount = gauge2;
-        weaponGauges[weaponIndex][2].fillAmount = gauge3;
+        switch (weaponIndex)
+        {
+            case 0:
+                weapon1Gauges[0].fillAmount = gauge1;
+                weapon1Gauges[1].fillAmount = gauge2;
+                weapon1Gauges[2].fillAmount = gauge3;
+                break;
+            case 1:
+                weapon2Gauges[0].fillAmount = gauge1;
+                weapon2Gauges[1].fillAmount = gauge2;
+                weapon2Gauges[2].fillAmount = gauge3;
+                break;
+            case 2:
+                weapon3Gauges[0].fillAmount = gauge1;
+                weapon3Gauges[1].fillAmount = gauge2;
+                weapon3Gauges[2].fillAmount = gauge3;
+                break;
+            default:
+                Debug.LogError("CanvasScript: No existing weaponIndex");
+                break;
+        }
     }
 }
