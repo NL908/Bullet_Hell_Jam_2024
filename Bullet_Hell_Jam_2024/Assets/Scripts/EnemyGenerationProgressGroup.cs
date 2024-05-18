@@ -14,7 +14,7 @@ public class EnemyGenerationProgressGroup
     private EnemyGenerationProgress hardProgress;
 
     [SerializeField]
-    public float fireProgressRate;
+    public float fireGenerationRate;
 
     // Method to update progress for all progress within the group 
     public void UpdateProgress(float amount)

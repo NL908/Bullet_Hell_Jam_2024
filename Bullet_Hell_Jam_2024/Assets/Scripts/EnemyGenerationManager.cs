@@ -74,7 +74,7 @@ public class EnemyGenerationManager : MonoBehaviour
     public void UpdateWeaponFire(int index)
     {
         if (isActive)
-            progressGroups[index].UpdateProgress(progressGroups[index].fireProgressRate);
+            progressGroups[index].UpdateProgress(progressGroups[index].fireGenerationRate);
     }
 
     private void UpdateGenerationUI()
