@@ -58,44 +58,44 @@ MonoBehaviour:
       currentProgress: 0
       maxProgress: 10
       enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      enemySpawnNumber: 8
+      enemySpawnNumber: 0
     hardProgress:
       currentProgress: 0
       maxProgress: 20
       enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      enemySpawnNumber: 20
-    fireProgressRate: 0
+      enemySpawnNumber: 0
+    fireProgressRate: 1
   - easyProgress:
       currentProgress: 0
-      maxProgress: 3
+      maxProgress: 4
       enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
-      enemySpawnNumber: 1
+      enemySpawnNumber: 2
     mediumProgress:
       currentProgress: 0
       maxProgress: 10
       enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
-      enemySpawnNumber: 3
+      enemySpawnNumber: 0
     hardProgress:
       currentProgress: 0
       maxProgress: 20
       enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
-      enemySpawnNumber: 6
-    fireProgressRate: 0
+      enemySpawnNumber: 0
+    fireProgressRate: 1
   - easyProgress:
       currentProgress: 0
-      maxProgress: 3
+      maxProgress: 5
       enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
       enemySpawnNumber: 1
     mediumProgress:
       currentProgress: 0
       maxProgress: 10
       enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      enemySpawnNumber: 3
+      enemySpawnNumber: 0
     hardProgress:
       currentProgress: 0
       maxProgress: 20
       enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
-      enemySpawnNumber: 5
-    fireProgressRate: 0
-  passiveGenerationRate: 1
-  selectedGenerationRate: 1
+      enemySpawnNumber: 0
+    fireProgressRate: 1
+  passiveGenerationRate: 0.5
+  selectedGenerationRate: 0.5
