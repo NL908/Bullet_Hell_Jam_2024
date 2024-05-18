@@ -27,4 +27,6 @@ public class CanvasTesting : MonoBehaviour
     void UpdateLife1() { canvas.UpdateLife(1); }
     [ContextMenu("Life 0")]
     void UpdateLife0() { canvas.UpdateLife(0); }
+    [ContextMenu("Weapon 1 DroneGauge")]
+    void Weapon_1_Drone() { canvas.UpdateWeapon1Gauge(0.5f, 0, 0); }
 }
