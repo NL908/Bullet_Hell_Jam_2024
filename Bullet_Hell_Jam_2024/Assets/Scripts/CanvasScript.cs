@@ -35,7 +35,7 @@ public class CanvasScript : MonoBehaviour
         float sec = newTime % 60;
         float min = Mathf.Floor(newTime / 60);
         Debug.Log("Parsed: " + min.ToString() + " " + sec.ToString());
-        string combineTime = min.ToString().PadLeft(2, '0') + ':' + sec.ToString().PadLeft(2, '0');
+        string combineTime = min.ToString().PadLeft(2, '0') + ':' + sec.ToString("00.00");
         time.text = combineTime;
     }
     /// <summary>
