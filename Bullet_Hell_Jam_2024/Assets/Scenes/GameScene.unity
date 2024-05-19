@@ -4514,19 +4514,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].fireGenerationRate
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[1].fireGenerationRate
-      value: 1.428571
+      value: 2.857142
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[2].fireGenerationRate
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].easyProgress.maxProgress
-      value: 5
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].hardProgress.maxProgress
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[1].easyProgress.enemyPrefab
@@ -4534,7 +4538,11 @@ PrefabInstance:
       objectReference: {fileID: 4404533812072491561, guid: fd31118138da4434e829d42dda99d6ae, type: 3}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[1].easyProgress.maxProgress
-      value: 5
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].hardProgress.maxProgress
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[2].easyProgress.enemyPrefab
@@ -4542,7 +4550,27 @@ PrefabInstance:
       objectReference: {fileID: 3779366386502984595, guid: a730d41d61744724b9efdae9f5235feb, type: 3}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[2].easyProgress.maxProgress
-      value: 5
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].hardProgress.maxProgress
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].mediumProgress.maxProgress
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].mediumProgress.maxProgress
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].mediumProgress.maxProgress
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].easyProgress.enemySpawnNumber
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8836866910078156085, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: m_LocalPosition.x
