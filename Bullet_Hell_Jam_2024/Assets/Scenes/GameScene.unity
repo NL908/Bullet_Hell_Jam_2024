@@ -2818,6 +2818,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2271870025144305602, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -546860196, guid: 87e8b2b4f633f0b4caf8e7bd9275b21e, type: 3}
+    - target: {fileID: 2271870025144305602, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4911692423784124438, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.95604
