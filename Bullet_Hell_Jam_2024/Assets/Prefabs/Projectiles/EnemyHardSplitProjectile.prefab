@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3385703224370473181}
   - component: {fileID: 5897655565676233965}
   - component: {fileID: 3095101530962390578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyHardSplitProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

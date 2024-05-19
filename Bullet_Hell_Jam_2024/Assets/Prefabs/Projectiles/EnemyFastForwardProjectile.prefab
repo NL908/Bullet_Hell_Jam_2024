@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8589364467177450205}
   - component: {fileID: 232354952989548775}
   - component: {fileID: 2994248942756109794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyFastForwardProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
