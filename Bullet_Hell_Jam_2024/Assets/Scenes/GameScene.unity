@@ -4358,20 +4358,68 @@ PrefabInstance:
       value: EnemyGenerationManager
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: passiveGenerationRate
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: selectedGenerationRate
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].fireGenerationRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].fireGenerationRate
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].fireGenerationRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].hardProgress.enemyPrefab
       value: 
       objectReference: {fileID: 2172912123330402978, guid: df0e9648430ad244d97609bc0406fa85, type: 3}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].hardProgress.enemyPrefab
+      value: 
+      objectReference: {fileID: 4543953388276449829, guid: 7e1a2a45ddb1700489ef98c62c0a7952, type: 3}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].hardProgress.enemyPrefab
+      value: 
+      objectReference: {fileID: 9040073726313406099, guid: 2ed8ed5c4ce306642aca0ee2d7f91736, type: 3}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].mediumProgress.enemyPrefab
       value: 
       objectReference: {fileID: 2923349479928046102, guid: bb2ae40ab35f6e94aa45622b4a20e8fb, type: 3}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].mediumProgress.enemyPrefab
+      value: 
+      objectReference: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].hardProgress.enemySpawnNumber
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].hardProgress.enemySpawnNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].hardProgress.enemySpawnNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].mediumProgress.enemySpawnNumber
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].mediumProgress.enemySpawnNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].mediumProgress.enemySpawnNumber
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8836866910078156085, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: m_LocalPosition.x

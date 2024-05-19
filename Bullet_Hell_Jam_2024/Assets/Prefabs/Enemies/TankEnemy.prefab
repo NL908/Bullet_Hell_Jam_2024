@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 146876333254039768, guid: 222da5521fd86994a86f8f036f01212a, type: 3}
-  emitInterval: 0.8
+  emitInterval: 1.2
   isActive: 0
   numberOfProjectiles: 4
   angleSpread: 360
@@ -129,7 +129,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: -1658449799, guid: 6c6c2c3a8916b074aa1a8d9527434797, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -203,14 +203,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.9375, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.58, y: 0.77}
   m_EdgeRadius: 0
 --- !u!114 &39608928942182581
 MonoBehaviour:
@@ -248,10 +248,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2720050129732264819, guid: 87e6e4f57c2a6cf4891333742adfc982, type: 3}
-  emitInterval: 3
+  emitInterval: 4
   isActive: 0
-  numberOfProjectiles: 3
-  angleSpread: 240
+  numberOfProjectiles: 2
+  angleSpread: 60
   targetPlayer: 1
 --- !u!114 &1552374363916911689
 MonoBehaviour:
@@ -266,6 +266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8589364467177450205, guid: f58255ab6303c0f4db970f7a39ad61c7, type: 3}
-  emitInterval: 1.5
+  emitInterval: 2
   isActive: 0
   randomOffsetRange: 0
