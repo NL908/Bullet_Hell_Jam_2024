@@ -86,7 +86,7 @@ public class EnemyGenerationManager : MonoBehaviour
                 float[][] percentageList = GetAllGenerationPercentage();
                 for (int i = 0; i < 3; i++)
                 {
-                    CanvasScript.instance.UpdateWeaponGauge(i, percentageList[i][0], percentageList[i][1], percentageList[i][2]);
+                    CanvasScript.instance.UpdateEnemeyProgress(i, percentageList[i][0], percentageList[i][1], percentageList[i][2]);
                 }
             }
             catch (Exception e) { Debug.LogError("UI Update for EnemyGenerationManager error: " + e.Message);}

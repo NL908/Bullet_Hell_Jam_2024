@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,7 +39,6 @@ public class CanvasScript : MonoBehaviour
     {
         float sec = newTime % 60;
         float min = Mathf.Floor(newTime / 60);
-        Debug.Log("Parsed: " + min.ToString() + " " + sec.ToString());
         string combineTime = min.ToString().PadLeft(2, '0') + ':' + sec.ToString("00.00");
         time.text = combineTime;
     }
@@ -52,40 +52,6 @@ public class CanvasScript : MonoBehaviour
         for (int i = 0; i < lifes.Length; ++i)
         {
             lifes[i].enabled = i < left;
-        }
-    }
-    [SerializeField] Image[] weapon1Gauges;
-    [SerializeField] Image[] weapon2Gauges;
-    [SerializeField] Image[] weapon3Gauges;
-    /// <summary>
-    /// Update the enemey gauges UI of a particular weapon
-    /// </summary>
-    /// <param name="weaponIndex">Index of weapon, 0, 1, 2</param>
-    /// <param name="gauge1">Value of drone gauge 1, must be between 0 and 1 (inclusive)</param>
-    /// <param name="gauge2">Value of shooter gauge 1, must be between 0 and 1 (inclusive)</param>
-    /// <param name="gauge3">Value of tank gauge 1, must be between 0 and 1 (inclusive)</param>
-    public void UpdateWeaponGauge(int weaponIndex, float gauge1, float gauge2, float gauge3)
-    {
-        switch (weaponIndex)
-        {
-            case 0:
-                weapon1Gauges[0].fillAmount = gauge1;
-                weapon1Gauges[1].fillAmount = gauge2;
-                weapon1Gauges[2].fillAmount = gauge3;
-                break;
-            case 1:
-                weapon2Gauges[0].fillAmount = gauge1;
-                weapon2Gauges[1].fillAmount = gauge2;
-                weapon2Gauges[2].fillAmount = gauge3;
-                break;
-            case 2:
-                weapon3Gauges[0].fillAmount = gauge1;
-                weapon3Gauges[1].fillAmount = gauge2;
-                weapon3Gauges[2].fillAmount = gauge3;
-                break;
-            default:
-                Debug.LogError("CanvasScript: Bad weaponIndex");
-                break;
         }
     }
     /// <summary>
@@ -119,6 +85,49 @@ public class CanvasScript : MonoBehaviour
         else
         {
             Debug.LogError("CanvasScript: Bad weaponIndex");
+        }
+    }
+
+    private void SetNewProgress(Image image, Image start, Image end, float progress)
+    {
+        Vector3 newPos = Vector3.Lerp(start.transform.localPosition, end.transform.localPosition, progress);
+        //float newY = Mathf.Lerp(enemyStartY, enemyEndY, progress);
+        //Vector3 oldPos = image.transform.localPosition;
+        //pos.y = newY;
+        //image.transform.localPosition = pos;
+        image.transform.localPosition = newPos;
+    }
+
+
+    [SerializeField] Image[] weapon1Enemies;
+    [SerializeField] Image[] weapon1Pos;
+    [SerializeField] Image[] weapon2Enemies;
+    [SerializeField] Image[] weapon2Pos;
+    [SerializeField] Image[] weapon3Enemies;
+    [SerializeField] Image[] weapon3Pos;
+
+    public void UpdateEnemeyProgress(int weaponIndex, float droneProg, float shooterProg, float tankProg)
+    {
+        switch (weaponIndex)
+        {
+            case 0:
+                SetNewProgress(weapon1Enemies[0], weapon1Pos[0], weapon1Pos[1], droneProg);
+                SetNewProgress(weapon1Enemies[1], weapon1Pos[0], weapon1Pos[1], shooterProg);
+                SetNewProgress(weapon1Enemies[2], weapon1Pos[0], weapon1Pos[1], tankProg);
+                break;
+            case 1:
+                SetNewProgress(weapon2Enemies[0], weapon2Pos[0], weapon2Pos[1], droneProg);
+                SetNewProgress(weapon2Enemies[1], weapon2Pos[0], weapon2Pos[1], shooterProg);
+                SetNewProgress(weapon2Enemies[2], weapon2Pos[0], weapon2Pos[1], tankProg);
+                break;
+            case 2:
+                SetNewProgress(weapon3Enemies[0], weapon3Pos[0], weapon3Pos[1], droneProg);
+                SetNewProgress(weapon3Enemies[1], weapon3Pos[0], weapon3Pos[1], shooterProg);
+                SetNewProgress(weapon3Enemies[2], weapon3Pos[0], weapon3Pos[1], tankProg);
+                break;
+            default:
+                Debug.LogError("CanvasScript: Bad weaponIndex");
+                break;
         }
     }
 }
