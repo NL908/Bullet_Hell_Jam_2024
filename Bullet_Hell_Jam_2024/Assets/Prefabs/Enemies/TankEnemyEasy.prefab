@@ -179,8 +179,8 @@ MonoBehaviour:
   acceleration: 0.5
   deceleration: 0.5
   isAlwaysFacePlayer: 1
-  hp: 200
-  maxHp: 200
+  hp: 320
+  maxHp: 320
   score: 5
   distanceFromPlayer: 8
   fanEmitterAngularSpeed: 25
