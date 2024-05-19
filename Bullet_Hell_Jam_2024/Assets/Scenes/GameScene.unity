@@ -3980,17 +3980,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754045478}
   m_CullTransparentMesh: 1
---- !u!114 &1764994910 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 295214922849995233, guid: 967261233a147324f88149c018cea39c, type: 3}
-  m_PrefabInstance: {fileID: 2075959355}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e490e40f397c0954098bbc13070090e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1871005128
 GameObject:
   m_ObjectHideFlags: 0
@@ -4299,18 +4288,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 188094154057507258, guid: 967261233a147324f88149c018cea39c, type: 3}
-      propertyPath: emitInterval
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 295214922849995233, guid: 967261233a147324f88149c018cea39c, type: 3}
-      propertyPath: angleSpread
-      value: 36
-      objectReference: {fileID: 0}
-    - target: {fileID: 3827008162159437374, guid: 967261233a147324f88149c018cea39c, type: 3}
-      propertyPath: emitters.Array.data[0]
-      value: 
-      objectReference: {fileID: 1764994910}
     - target: {fileID: 7709160769393522174, guid: 967261233a147324f88149c018cea39c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.49
@@ -4373,16 +4350,20 @@ PrefabInstance:
       value: EnemyGenerationManager
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
-      propertyPath: progressGroups.Array.data[0].fireGenerationRate
-      value: 0.8
+      propertyPath: progressGroups.Array.data[0].hardProgress.enemyPrefab
+      value: 
+      objectReference: {fileID: 2172912123330402978, guid: df0e9648430ad244d97609bc0406fa85, type: 3}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].mediumProgress.enemyPrefab
+      value: 
+      objectReference: {fileID: 2923349479928046102, guid: bb2ae40ab35f6e94aa45622b4a20e8fb, type: 3}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].hardProgress.enemySpawnNumber
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
-      propertyPath: progressGroups.Array.data[1].fireGenerationRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
-      propertyPath: progressGroups.Array.data[2].fireGenerationRate
-      value: 0.6
+      propertyPath: progressGroups.Array.data[0].mediumProgress.enemySpawnNumber
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8836866910078156085, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: m_LocalPosition.x

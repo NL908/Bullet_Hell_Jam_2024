@@ -58,12 +58,12 @@ MonoBehaviour:
       currentProgress: 0
       maxProgress: 20
       enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      enemySpawnNumber: 0
+      enemySpawnNumber: 6
     hardProgress:
       currentProgress: 0
       maxProgress: 40
       enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
-      enemySpawnNumber: 0
+      enemySpawnNumber: 9
     fireGenerationRate: 0.8
   - easyProgress:
       currentProgress: 0
