@@ -51,51 +51,51 @@ MonoBehaviour:
   progressGroups:
   - easyProgress:
       currentProgress: 0
-      maxProgress: 3
+      maxProgress: 7
       enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       enemySpawnNumber: 3
     mediumProgress:
       currentProgress: 0
-      maxProgress: 10
+      maxProgress: 20
       enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       enemySpawnNumber: 0
     hardProgress:
       currentProgress: 0
-      maxProgress: 20
+      maxProgress: 40
       enemyPrefab: {fileID: 5185252019395245174, guid: 7503f84a0d067df499a1af7672d456f1, type: 3}
       enemySpawnNumber: 0
-    fireProgressRate: 1
+    fireGenerationRate: 0.8
   - easyProgress:
       currentProgress: 0
-      maxProgress: 4
-      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
-      enemySpawnNumber: 2
-    mediumProgress:
-      currentProgress: 0
-      maxProgress: 10
-      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
-      enemySpawnNumber: 0
-    hardProgress:
-      currentProgress: 0
-      maxProgress: 20
-      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
-      enemySpawnNumber: 0
-    fireProgressRate: 1
-  - easyProgress:
-      currentProgress: 0
-      maxProgress: 5
-      enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      maxProgress: 7
+      enemyPrefab: {fileID: 4404533812072491561, guid: fd31118138da4434e829d42dda99d6ae, type: 3}
       enemySpawnNumber: 1
     mediumProgress:
       currentProgress: 0
-      maxProgress: 10
-      enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      maxProgress: 20
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
       enemySpawnNumber: 0
     hardProgress:
+      currentProgress: 0
+      maxProgress: 40
+      enemyPrefab: {fileID: 5185252019395245174, guid: 7a8f87a15cd82f840a73878ebdafa082, type: 3}
+      enemySpawnNumber: 0
+    fireGenerationRate: 2
+  - easyProgress:
+      currentProgress: 0
+      maxProgress: 7
+      enemyPrefab: {fileID: 3779366386502984595, guid: a730d41d61744724b9efdae9f5235feb, type: 3}
+      enemySpawnNumber: 1
+    mediumProgress:
       currentProgress: 0
       maxProgress: 20
       enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
       enemySpawnNumber: 0
-    fireProgressRate: 1
-  passiveGenerationRate: 0.5
-  selectedGenerationRate: 0.5
+    hardProgress:
+      currentProgress: 0
+      maxProgress: 40
+      enemyPrefab: {fileID: 5185252019395245174, guid: aaa2105fe935a6d4d908cd1700b3146a, type: 3}
+      enemySpawnNumber: 0
+    fireGenerationRate: 0.6
+  passiveGenerationRate: 1
+  selectedGenerationRate: 0.6
