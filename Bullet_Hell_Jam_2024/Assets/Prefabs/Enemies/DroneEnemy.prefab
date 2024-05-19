@@ -134,6 +134,8 @@ MonoBehaviour:
   hp: 70
   maxHp: 70
   score: 1
+  _deathParticle: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
+  mainColor: {r: 0.29800004, g: 1, b: 1, a: 0.40392157}
   sinSpeed: 5
   sinDegree: 45
 --- !u!70 &5499588485506572565

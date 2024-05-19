@@ -232,6 +232,8 @@ MonoBehaviour:
   hp: 200
   maxHp: 200
   score: 5
+  _deathParticle: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
+  mainColor: {r: 1, g: 0.305, b: 0.888075, a: 0.40392157}
   distanceFromPlayer: 8
   fanEmitterAngularSpeed: 25
   fanEmitter: {fileID: 2659956001978569285}

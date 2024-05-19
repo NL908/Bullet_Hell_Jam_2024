@@ -16,6 +16,7 @@ public abstract class Enemy : MonoBehaviour
 {
     /* Property */
     // For Movement
+    [Header("Movement")]
     [SerializeField] protected float maxSpeed = 2f;
     [SerializeField] protected float steerForce;
     [SerializeField] protected float acceleration;
@@ -23,6 +24,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected bool isAlwaysFacePlayer = false;
 
     // Stats
+    [Header("Stats")]
     [SerializeField] protected float hp;
     [SerializeField] protected float maxHp;
     [SerializeField] protected int score;
@@ -31,11 +33,16 @@ public abstract class Enemy : MonoBehaviour
     protected EnemyType type;
 
     // Components
+    [Header("Components")]
     protected Rigidbody2D _rb;
     protected Collider2D _collider;
+    [SerializeField] protected ParticleSystem _deathParticle;
+    [SerializeField] protected Color mainColor;
 
     // Behavior
     protected ProjectileEmitter[] _emitters; // GetComponents will generate it in the order they are linked in Inspector
+
+    protected bool _isAlive = true;
 
     private Vector2 _arenaSize;
 
@@ -46,6 +53,7 @@ public abstract class Enemy : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         _emitters = GetComponents<ProjectileEmitter>();
         _arenaSize = GameMaster.instance.arenaSize;
+        _isAlive = true;
     }
 
     protected void FixedUpdate()
@@ -60,13 +68,13 @@ public abstract class Enemy : MonoBehaviour
 
     #region Hit & Death
     // When the enemy is hit by something
-    public virtual void OnHit(float damageTaken)
+    public virtual void OnHit(float damageTaken, Vector2 damageDirection)
     {
         // HP deduction
         hp = Mathf.Clamp(hp - damageTaken, 0, maxHp);
-        if (hp <= 0)
+        if (hp <= 0 && _isAlive)
         {
-            OnDeath();
+            OnDeath(damageDirection);
         }
 
         // Play hit sound
@@ -74,13 +82,18 @@ public abstract class Enemy : MonoBehaviour
     }
 
     // When the enemy dies
-    protected virtual void OnDeath()
+    protected virtual void OnDeath(Vector2 damageDirection)
     {
         // disable hitbox
+        _isAlive = false;
         // add score
         GameMaster.instance.Score += score;
         // play some dead sound
         // do some cool animation
+        // burst some neat particles
+        ParticleSystem deathParticle = Instantiate(this._deathParticle, transform.position, Quaternion.LookRotation(Vector3.forward, damageDirection));
+        ParticleSystem.MainModule main = deathParticle.main;
+        main.startColor = mainColor;
         // throw it into the void
         Destroy(gameObject);
     }

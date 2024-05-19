@@ -25,7 +25,7 @@ public class ForwardExplodeProjectile : HomingProjectile
         foreach (Collider2D hit in colliders) {
             Debug.Log("*Gasp* The enemy "+hit.name+" caught in explosion");
             Enemy enemy = hit.GetComponent<Enemy>();
-            enemy.OnHit(explosionDamage);
+            enemy.OnHit(explosionDamage, enemy.transform.position - transform.position);
         }
         
     }

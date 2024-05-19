@@ -9,9 +9,9 @@ public class DummyEnemy : Enemy
         return Vector2.zero;
     }
 
-    protected override void OnDeath()
+    protected override void OnDeath(Vector2 damageDirection)
     {
         GameMaster.instance.StartGame();
-        Destroy(gameObject);
+        base.OnDeath(damageDirection);
     }
 }
