@@ -58,6 +58,10 @@ public class PlayerInputHandler : MonoBehaviour
 
         inputActions.Player.SelectPreviousWeapon.performed += SelectPreviousWeapon_performed;
         inputActions.Player.SelectNextWeapon.performed += SelectNextWeapon_performed;
+
+        inputActions.Player.SelectWeapon1.performed += SelectWeapon1_performed;
+        inputActions.Player.SelectWeapon2.performed += SelectWeapon2_performed;
+        inputActions.Player.SelectWeapon3.performed += SelectWeapon3_performed;
     }
 
     private void Start()
@@ -77,6 +81,10 @@ public class PlayerInputHandler : MonoBehaviour
 
         inputActions.Player.SelectPreviousWeapon.Enable();
         inputActions.Player.SelectNextWeapon.Enable();
+
+        inputActions.Player.SelectWeapon1.Enable();
+        inputActions.Player.SelectWeapon2.Enable();
+        inputActions.Player.SelectWeapon3.Enable();
     }
 
     private void OnDisable()
@@ -91,6 +99,10 @@ public class PlayerInputHandler : MonoBehaviour
 
         inputActions.Player.SelectPreviousWeapon.Disable();
         inputActions.Player.SelectNextWeapon.Disable();
+
+        inputActions.Player.SelectWeapon1.Disable();
+        inputActions.Player.SelectWeapon2.Disable();
+        inputActions.Player.SelectWeapon3.Disable();
     }
 
     public void TickInput()
@@ -134,5 +146,20 @@ public class PlayerInputHandler : MonoBehaviour
     private void SelectNextWeapon_performed(InputAction.CallbackContext obj)
     {
         playerWeaponManager.SelectNextWeapon();
+    }
+
+    private void SelectWeapon1_performed(InputAction.CallbackContext obj)
+    {
+        playerWeaponManager.SelectWeapon1();
+    }
+
+    private void SelectWeapon2_performed(InputAction.CallbackContext obj)
+    {
+        playerWeaponManager.SelectWeapon2();
+    }
+
+    private void SelectWeapon3_performed(InputAction.CallbackContext obj)
+    {
+        playerWeaponManager.SelectWeapon3();
     }
 }

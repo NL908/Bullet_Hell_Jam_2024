@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2171758895449538396, guid: 57bd03e273570bb49a6332ff1367b457, type: 3}
-  emitInterval: 0.5
+  emitInterval: 0.25
   isActive: 0
-  randomOffsetRange: 3
+  randomOffsetRange: 0
 --- !u!1 &1349807945221143037
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1367706846154069286, guid: b342c2c3e8006fb47bba28a1e09007d7, type: 3}
-  emitInterval: 0.7
+  emitInterval: 0.4
   isActive: 0
   randomOffsetRange: 0
 --- !u!1 &4527056017893017874
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6974498015264349232, guid: 14616114958903c45992e4c35d547f9f, type: 3}
-  emitInterval: 1.2
+  emitInterval: 1
   isActive: 0
   randomOffsetRange: 0
 --- !u!1 &6677972033853962212

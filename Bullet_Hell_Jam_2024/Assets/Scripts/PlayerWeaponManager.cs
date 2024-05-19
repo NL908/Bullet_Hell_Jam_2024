@@ -43,6 +43,7 @@ public class PlayerWeaponManager : MonoBehaviour
         }
     }
 
+    #region Select Weapon Methods
     public void SelectNextWeapon()
     {
         selectedWeaponIndex += 1;
@@ -60,6 +61,25 @@ public class PlayerWeaponManager : MonoBehaviour
         }
         UpdateWeaponSelectionUI();
     }
+
+    public void SelectWeapon1()
+    {
+        selectedWeaponIndex = 0;
+        UpdateWeaponSelectionUI();
+    }
+
+    public void SelectWeapon2()
+    {
+        selectedWeaponIndex = 1;
+        UpdateWeaponSelectionUI();
+    }
+
+    public void SelectWeapon3()
+    {
+        selectedWeaponIndex = 2;
+        UpdateWeaponSelectionUI();
+    }
+    #endregion
 
     private void UpdateWeaponSelectionUI()
     {
