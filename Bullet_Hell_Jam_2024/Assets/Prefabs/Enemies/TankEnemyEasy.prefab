@@ -192,7 +192,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3779366386502984595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e490e40f397c0954098bbc13070090e5, type: 3}
   m_Name: 
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3779366386502984595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de95a895feb50d2428f425df2e3881d7, type: 3}
   m_Name: 
@@ -266,6 +266,6 @@ MonoBehaviour:
   projectilePrefab: {fileID: 146876333254039768, guid: 222da5521fd86994a86f8f036f01212a, type: 3}
   emitInterval: 0.8
   isActive: 0
-  numberOfProjectiles: 2
+  numberOfProjectiles: 4
   angleSpread: 360
   targetPlayer: 0
