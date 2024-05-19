@@ -291,7 +291,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2108523405}
   - {fileID: 1174787236}
   - {fileID: 1971156973}
   - {fileID: 1178837898}
@@ -299,6 +298,7 @@ RectTransform:
   - {fileID: 1534999829}
   - {fileID: 902123440}
   - {fileID: 589061593}
+  - {fileID: 2108523405}
   m_Father: {fileID: 1620889674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -539,7 +539,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 339301516}
   - {fileID: 412936499}
   - {fileID: 1754045479}
   - {fileID: 1661949267}
@@ -547,6 +546,7 @@ RectTransform:
   - {fileID: 726990782}
   - {fileID: 1474617486}
   - {fileID: 459414857}
+  - {fileID: 339301516}
   m_Father: {fileID: 1620889674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -612,7 +612,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: a3cf406cb6e5e1d4899e298f289f4168, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &339301518
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3404,7 +3404,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: a3cf406cb6e5e1d4899e298f289f4168, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3412,7 +3412,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &1539629320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3624,7 +3624,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1539629318}
   - {fileID: 514481182}
   - {fileID: 1533279986}
   - {fileID: 496188457}
@@ -3632,6 +3631,7 @@ RectTransform:
   - {fileID: 1231134134}
   - {fileID: 378148765}
   - {fileID: 1927282833}
+  - {fileID: 1539629318}
   m_Father: {fileID: 1620889674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4448,7 +4448,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: a3cf406cb6e5e1d4899e298f289f4168, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4456,7 +4456,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &2108523407
 CanvasRenderer:
   m_ObjectHideFlags: 0
