@@ -426,5 +426,5 @@ MonoBehaviour:
   _enemyDirectionRadius: 4
   _turnRate: 270
   particle: {fileID: 2640199646894417530, guid: 5df19ea9aecf7984690af8453ec6311a, type: 3}
-  explosionDamage: 40
+  explosionDamage: 70
   explosionRadius: 2

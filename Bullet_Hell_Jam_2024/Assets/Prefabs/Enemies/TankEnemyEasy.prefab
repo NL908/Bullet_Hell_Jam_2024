@@ -179,8 +179,8 @@ MonoBehaviour:
   acceleration: 0.5
   deceleration: 0.5
   isAlwaysFacePlayer: 1
-  hp: 200
-  maxHp: 200
+  hp: 320
+  maxHp: 320
   score: 5
   distanceFromPlayer: 8
   fanEmitterAngularSpeed: 25
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 146876333254039768, guid: 222da5521fd86994a86f8f036f01212a, type: 3}
-  emitInterval: 0.8
+  emitInterval: 1.5
   isActive: 0
   numberOfProjectiles: 4
   angleSpread: 360

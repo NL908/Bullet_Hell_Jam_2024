@@ -31,12 +31,6 @@ public class CanvasTesting : MonoBehaviour
     void UpdateLife1() { canvas.UpdateLife(1); }
     [ContextMenu("Life 0")]
     void UpdateLife0() { canvas.UpdateLife(0); }
-    [ContextMenu("Weapon 1 Gauge")]
-    void UpdateWeapon1Gauge() { canvas.UpdateWeaponGauge(0, 0.1f, 0.2f, 0.3f); }
-    [ContextMenu("Weapon 2 Gauge")]
-    void UpdateWeapon2Gauge() { canvas.UpdateWeaponGauge(1, 0.01f, 0.75f, 0.98f); }
-    [ContextMenu("Weapon 3 Gauge")]
-    void UpdateWeapon3Gauge() { canvas.UpdateWeaponGauge(2, 0.5f, 0, 1); }
     [ContextMenu("Select Weapon 1")]
     void SelectWeapon1() { canvas.UpdateSelectedWeapon(0); }
     [ContextMenu("Select Weapon 2")]

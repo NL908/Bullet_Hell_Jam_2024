@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5713248417334804693}
   - component: {fileID: 3166223227457793803}
-  - component: {fileID: 231292158752855333}
+  - component: {fileID: 295214922849995233}
   m_Layer: 6
   m_Name: RifleEmitter
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &231292158752855333
+--- !u!114 &295214922849995233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,13 +94,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 738518470763335821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f529ae5a6db117644a68a9835c9b4d6e, type: 3}
+  m_Script: {fileID: 11500000, guid: e490e40f397c0954098bbc13070090e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2171758895449538396, guid: 57bd03e273570bb49a6332ff1367b457, type: 3}
-  emitInterval: 0.5
+  emitInterval: 0.25
   isActive: 0
-  randomOffsetRange: 3
+  numberOfProjectiles: 3
+  angleSpread: 36
+  targetPlayer: 0
 --- !u!1 &1349807945221143037
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1367706846154069286, guid: b342c2c3e8006fb47bba28a1e09007d7, type: 3}
-  emitInterval: 0.7
+  emitInterval: 0.4
   isActive: 0
   randomOffsetRange: 0
 --- !u!1 &4527056017893017874
@@ -194,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6974498015264349232, guid: 14616114958903c45992e4c35d547f9f, type: 3}
-  emitInterval: 1.2
+  emitInterval: 0.6
   isActive: 0
   randomOffsetRange: 0
 --- !u!1 &6677972033853962212
@@ -368,7 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedWeaponIndex: 0
   emitters:
-  - {fileID: 231292158752855333}
+  - {fileID: 295214922849995233}
   - {fileID: 188094154057507258}
   - {fileID: 627147823981407077}
 --- !u!114 &6984573928518201925
