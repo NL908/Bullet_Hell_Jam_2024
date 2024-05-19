@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForwardExplodeProjectile : ForwardProjectile
+public class ForwardExplodeProjectile : HomingProjectile
 {
-    public LayerMask enemyLayer;
     [SerializeField] ParticleSystem particle;
     [SerializeField] int explosionDamage = 50;
     [SerializeField] float explosionRadius = 2f;
@@ -22,7 +21,7 @@ public class ForwardExplodeProjectile : ForwardProjectile
 
     void Explode() {
         ParticleSystem particleInstance = Instantiate(particle, transform.position, transform.rotation);
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, _enemyLayer);
         foreach (Collider2D hit in colliders) {
             Debug.Log("*Gasp* The enemy "+hit.name+" caught in explosion");
             Enemy enemy = hit.GetComponent<Enemy>();

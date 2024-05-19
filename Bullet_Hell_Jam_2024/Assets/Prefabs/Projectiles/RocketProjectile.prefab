@@ -420,9 +420,11 @@ MonoBehaviour:
   speed: 12
   isEnemy: 0
   destroyOnHit: 1
-  enemyLayer:
+  _enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  _enemyDirectionRadius: 4
+  _turnRate: 270
   particle: {fileID: 2640199646894417530, guid: 5df19ea9aecf7984690af8453ec6311a, type: 3}
   explosionDamage: 40
   explosionRadius: 2
