@@ -48,6 +48,7 @@ public class GameMaster : MonoBehaviour
             try
             {
                 CanvasScript.instance.UpdateTime(currTimer);
+                CanvasScript.instance.UpdateTimeFill(Mathf.Round(currTimer) / maxTime);
             }
             catch (Exception e) { Debug.LogError("Timer UI update error with: " + e.Message); }
         }

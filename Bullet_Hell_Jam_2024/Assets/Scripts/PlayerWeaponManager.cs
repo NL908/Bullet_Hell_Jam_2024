@@ -53,6 +53,7 @@ public class PlayerWeaponManager : MonoBehaviour
                 if (EnemyGenerationManager.instance.isActive)
                 {
                     EnemyGenerationManager.instance.UpdateWeaponFire(selectedWeaponIndex);
+                    EnemyGenerationManager.instance.UpdateHeatFire(selectedWeaponIndex, currentEmitter.emitInterval);
                 }
             }
         }

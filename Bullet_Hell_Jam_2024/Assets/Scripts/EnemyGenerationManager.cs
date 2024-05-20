@@ -20,6 +20,14 @@ public class EnemyGenerationManager : MonoBehaviour
     [SerializeField]
     public EnemyGenerationProgressGroup[] progressGroups;
 
+    // Heat
+    // max heat
+    [SerializeField] private float maxHeat = 15;
+    [SerializeField] private float maxHeatMultiplier = 3;
+    private float heatIncreaseSpeed = 1f;
+    [SerializeField] private float heatDeductionSpeed = .75f;
+    public float[] heats;
+
     // Passive generation rate. Unit in per second
     private float passiveGenerationRate = 1f;
     // Additional generation rate for the EnemyGenerationProgressGroup corresponding to the current selected weapon
@@ -39,6 +47,7 @@ public class EnemyGenerationManager : MonoBehaviour
         //InvokeRepeating("CheckEnemySpawns", 0, 0.1f);
         _arenaSize = GameMaster.instance.arenaSize;
         UpdateGenerationUI();
+        heats = new float[3];
     }
 
     private void Update()
@@ -49,6 +58,7 @@ public class EnemyGenerationManager : MonoBehaviour
             UpdateSelectedWeaponGeneration();
             CheckEnemySpawns();
             UpdateGenerationUI();
+            UpdateHeats();
         }
     }
 
@@ -56,9 +66,9 @@ public class EnemyGenerationManager : MonoBehaviour
     private void UpdatePassiveGeneration()
     {
         float deltaTime = Time.deltaTime;
-        foreach(EnemyGenerationProgressGroup group in progressGroups)
+        for(int i = 0; i < progressGroups.Length; i++)
         {
-            group.UpdateProgress(passiveGenerationRate * deltaTime);
+            progressGroups[i].UpdateProgress(passiveGenerationRate * deltaTime * CalcHeatMultiplier(i));
         }
     }
 
@@ -66,7 +76,7 @@ public class EnemyGenerationManager : MonoBehaviour
     {
         float deltaTime = Time.deltaTime;
         int currSelectedWeaponIndex = PlayerWeaponManager.instance.selectedWeaponIndex;
-        progressGroups[currSelectedWeaponIndex].UpdateProgress(selectedGenerationRate * deltaTime);
+        progressGroups[currSelectedWeaponIndex].UpdateProgress(selectedGenerationRate * deltaTime * CalcHeatMultiplier(currSelectedWeaponIndex));
     }
 
     // Update every progress in a progress group with the index
@@ -74,7 +84,7 @@ public class EnemyGenerationManager : MonoBehaviour
     public void UpdateWeaponFire(int index)
     {
         if (isActive)
-            progressGroups[index].UpdateProgress(progressGroups[index].fireGenerationRate);
+            progressGroups[index].UpdateProgress(progressGroups[index].fireGenerationRate * CalcHeatMultiplier(index));
     }
 
     private void UpdateGenerationUI()
@@ -144,4 +154,34 @@ public class EnemyGenerationManager : MonoBehaviour
             yield return new WaitForSeconds(enemyGroupSpawnDelay);
         }
     }
+
+    #region Heat
+    public float CalcHeatMultiplier(int index)
+    {
+        return ((heats[index] / maxHeat) * (maxHeatMultiplier - 1f)) + 1f;
+    }
+
+    public void UpdateHeatFire(int index, float interval)
+    {
+        heats[index] = Mathf.Min(heats[index] + heatIncreaseSpeed * interval, maxHeat); 
+    }
+
+    private void UpdateHeats()
+    {
+        int currSelectedWeaponIndex = PlayerWeaponManager.instance.selectedWeaponIndex;
+        for (int i = 0; i < heats.Length; i++)
+        {
+            if (i != currSelectedWeaponIndex)
+            {
+                // Heat for non-selected weapon
+                heats[i] = Mathf.Max(heats[i] - Time.deltaTime * heatDeductionSpeed, 0);
+            }
+            else
+            {
+                // Heat for selected weapon
+                //heats[i] = Mathf.Min(heats[i] + Time.deltaTime * heatIncreaseSpeed, maxHeat);
+            }
+        }
+    }    
+    #endregion
 }

@@ -15,6 +15,7 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] Image[] lifes;
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
+    [SerializeField] Image timeFG;
     [SerializeField] TextMeshProUGUI gameOverScore;
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameObject gameWinScreen;
@@ -43,10 +44,16 @@ public class CanvasScript : MonoBehaviour
     /// <param name="newTime">Time in seconds</param>
     public void UpdateTime(float newTime)
     {
-        float sec = newTime % 60;
-        float min = Mathf.Floor(newTime / 60);
-        string combineTime = min.ToString().PadLeft(2, '0') + ':' + sec.ToString("00.00");
+        //float sec = newTime % 60;
+        //float min = Mathf.Floor(newTime / 60);
+        //string combineTime = min.ToString().PadLeft(2, '0') + ':' + sec.ToString("00");
+        string combineTime = newTime.ToString("F0");
         time.text = combineTime;
+    }
+
+    public void UpdateTimeFill(float fillAmount)
+    {
+        timeFG.fillAmount = fillAmount;
     }
     /// <summary>
     /// Update the number of life icon left, if it excess max UI amount, all will be displayed

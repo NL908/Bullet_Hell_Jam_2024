@@ -64,7 +64,7 @@ MonoBehaviour:
       maxProgress: 60
       enemyPrefab: {fileID: 9040073726313406099, guid: 2ed8ed5c4ce306642aca0ee2d7f91736, type: 3}
       enemySpawnNumber: 1
-    fireGenerationRate: 0.75
+    fireGenerationRate: 1.2
   - easyProgress:
       currentProgress: 0
       maxProgress: 7
@@ -80,7 +80,7 @@ MonoBehaviour:
       maxProgress: 60
       enemyPrefab: {fileID: 2172912123330402978, guid: df0e9648430ad244d97609bc0406fa85, type: 3}
       enemySpawnNumber: 7
-    fireGenerationRate: 1.7
+    fireGenerationRate: 0.75
   - easyProgress:
       currentProgress: 0
       maxProgress: 7
@@ -96,5 +96,9 @@ MonoBehaviour:
       maxProgress: 60
       enemyPrefab: {fileID: 4543953388276449829, guid: 7e1a2a45ddb1700489ef98c62c0a7952, type: 3}
       enemySpawnNumber: 1
-    fireGenerationRate: 1.2
+    fireGenerationRate: 1.3
+  maxHeat: 15
+  maxHeatMultiplier: 2
+  heatDeductionSpeed: 1.5
+  heats: []
   selectedGenerationRate: 1
