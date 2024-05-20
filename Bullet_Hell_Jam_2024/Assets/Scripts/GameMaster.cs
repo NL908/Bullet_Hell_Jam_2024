@@ -66,7 +66,7 @@ public class GameMaster : MonoBehaviour
             if (CurrTimer <= 0)
             {
                 Debug.Log("Time is over!");
-                GameOver();
+                GameWin();
             }
         }
     }
@@ -82,7 +82,14 @@ public class GameMaster : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game over");
-        CanvasScript.instance.ShowResultScreen();
+        CanvasScript.instance.ShowGameOverScreen();
+        isGameStarted = false;
+    }
+
+    public void GameWin()
+    {
+        Debug.Log("Game Finished");
+        CanvasScript.instance.ShowWiningScreen();
         isGameStarted = false;
     }
 

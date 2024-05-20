@@ -15,6 +15,8 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI time;
     [SerializeField] TextMeshProUGUI gameOverScore;
     [SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject gameWinScreen;
+    [SerializeField] TextMeshProUGUI gameWinScore;
     [SerializeField] Image[] weaponSelections;
 
     private void Awake()
@@ -57,17 +59,19 @@ public class CanvasScript : MonoBehaviour
     /// <summary>
     /// Display the result screen after game over
     /// </summary>
-    public void ShowResultScreen()
+    public void ShowGameOverScreen()
     {
         gameOverScreen.SetActive(true);
         gameOverScore.text = score.text;
     }
 
     /// <summary>
-    /// Called when the retry button in result screen is clicked
+    /// Display the result screen after game over
     /// </summary>
-    public void OnClickRetry() {
-        GameMaster.instance.Restart();
+    public void ShowWiningScreen()
+    {
+        gameWinScreen.SetActive(true);
+        gameWinScore.text = score.text;
     }
     /// <summary>
     /// Update selection UI for weapon
