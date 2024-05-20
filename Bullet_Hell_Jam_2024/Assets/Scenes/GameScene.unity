@@ -9985,11 +9985,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].fireGenerationRate
-      value: 2.4
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].fireGenerationRate
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[2].fireGenerationRate
-      value: 1.6
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: progressGroups.Array.data[0].hardProgress.maxProgress

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  steerForce: 4
+  steerForce: 3
   acceleration: 1
   deceleration: 0
   isAlwaysFacePlayer: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
   _deathParticle: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
   mainColor: {r: 0.29800004, g: 1, b: 1, a: 0.40392157}
   sinSpeed: 5
-  sinDegree: 45
+  sinDegree: 30
 --- !u!70 &5499588485506572565
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
