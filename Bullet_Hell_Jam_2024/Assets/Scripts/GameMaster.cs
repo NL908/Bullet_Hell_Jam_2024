@@ -53,6 +53,9 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private GameObject controlCanvas;
+
     private void Awake()
     {
         instance = this;
@@ -86,6 +89,7 @@ public class GameMaster : MonoBehaviour
         EnemyGenerationManager.instance.isActive = true;
         Score = 0;
         CurrTimer = maxTime;
+        controlCanvas.SetActive(false);
     }
 
     public void GameOver()
