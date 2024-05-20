@@ -21,7 +21,7 @@ public class EnemyGenerationManager : MonoBehaviour
     public EnemyGenerationProgressGroup[] progressGroups;
 
     // Passive generation rate. Unit in per second
-    public float passiveGenerationRate = 1f;
+    private float passiveGenerationRate = 1f;
     // Additional generation rate for the EnemyGenerationProgressGroup corresponding to the current selected weapon
     public float selectedGenerationRate = 1f;
 

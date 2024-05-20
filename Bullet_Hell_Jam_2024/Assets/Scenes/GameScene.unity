@@ -1319,6 +1319,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459528411}
   m_CullTransparentMesh: 1
+--- !u!1 &474110321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8181145558086074074, guid: 967261233a147324f88149c018cea39c, type: 3}
+  m_PrefabInstance: {fileID: 2075959355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &474110322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474110321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f98fca13b22a344bf8fd9172997a1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenClearBombObject: {fileID: 0}
 --- !u!1 &496188456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,7 +2296,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 22, y: 18}
+  m_Size: {x: 14, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5559,7 +5577,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8181145558086074074, guid: 967261233a147324f88149c018cea39c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 474110322}
   m_SourcePrefab: {fileID: 100100000, guid: 967261233a147324f88149c018cea39c, type: 3}
 --- !u!1001 &2088774046
 PrefabInstance:
@@ -5572,10 +5593,6 @@ PrefabInstance:
     - target: {fileID: 4805628181173055521, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: m_Name
       value: EnemyGenerationManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
-      propertyPath: passiveGenerationRate
-      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: selectedGenerationRate

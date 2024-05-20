@@ -122,7 +122,13 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] Image[] weapon2Pos;
     [SerializeField] Image[] weapon3Enemies;
     [SerializeField] Image[] weapon3Pos;
-
+    /// <summary>
+    /// Update the enemey progress bar based on given percentage
+    /// </summary>
+    /// <param name="weaponIndex">Weapon index, 0, 1, 2</param>
+    /// <param name="droneProg">Number between 0 and 1 (inclusive)</param>
+    /// <param name="shooterProg">Number between 0 and 1 (inclusive)</param>
+    /// <param name="tankProg">Number between 0 and 1 (inclusive)</param>
     public void UpdateEnemeyProgress(int weaponIndex, float droneProg, float shooterProg, float tankProg)
     {
         switch (weaponIndex)
