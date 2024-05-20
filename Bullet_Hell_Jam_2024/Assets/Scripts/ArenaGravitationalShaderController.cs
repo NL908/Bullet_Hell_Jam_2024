@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class ArenaGravitationalShaderController : MonoBehaviour
 {
+    [SerializeField]
+    private float magnification;
     private Material material;
-    private void Awake()
+
+    private void Start()
     {
         SpriteRenderer _sr = GetComponent<SpriteRenderer>();
         material = _sr.material;
+        material.SetFloat("_Magnification", magnification);
     }
 
     private void LateUpdate()

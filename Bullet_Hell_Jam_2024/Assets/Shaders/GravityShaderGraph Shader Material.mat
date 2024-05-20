@@ -41,11 +41,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Magnification: -0.13
+    - _Magnification: -0.03
     - _Radius: 1
     - _Size: 0.1
     m_Colors:
-    - _FocalPoint: {r: 0, g: 0, b: 0, a: 0}
+    - _FocalPoint: {r: -1.6828427, g: -0.8313714, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8317985576975530682
 MonoBehaviour:
