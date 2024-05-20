@@ -93,7 +93,10 @@ public abstract class Enemy : MonoBehaviour
         // burst some neat particles
         ParticleSystem deathParticle = Instantiate(this._deathParticle, transform.position, Quaternion.LookRotation(Vector3.forward, damageDirection));
         ParticleSystem.MainModule main = deathParticle.main;
-        main.startColor = mainColor;
+        float h, s, v;
+        Color.RGBToHSV(main.startColor.color, out _, out s, out v);
+        Color.RGBToHSV(mainColor, out h, out _, out _);
+        main.startColor = Color.HSVToRGB(h, s, v);
         // throw it into the void
         Destroy(gameObject);
     }
