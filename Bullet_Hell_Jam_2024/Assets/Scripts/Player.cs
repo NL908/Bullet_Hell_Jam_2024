@@ -85,6 +85,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlaySound("PlayerDamage");
             Instantiate(screenClearWave, transform.position, Quaternion.identity);
             invulnerable = true;
             StartCoroutine(FlashEffect());
@@ -93,6 +94,7 @@ public class Player : MonoBehaviour
 
     private void OnDeath(Vector2 damageDirection)
     {
+        AudioManager.instance.PlaySound("PlayerDeath");
         playerSprite.enabled = false;
         // So player cannot be moved anymore
         isDead = true;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum EnemyType
@@ -43,6 +44,7 @@ public abstract class Enemy : MonoBehaviour
     protected ProjectileEmitter[] _emitters; // GetComponents will generate it in the order they are linked in Inspector
 
     protected bool _isAlive = true;
+    protected bool _awardPoints = true; // If false, do not award point when destroyed
 
     private Vector2 _arenaSize;
 
@@ -87,7 +89,7 @@ public abstract class Enemy : MonoBehaviour
         // disable hitbox
         _isAlive = false;
         // add score
-        GameMaster.instance.Score += score;
+        if (_awardPoints) GameMaster.instance.Score += score;
         // play some dead sound
         // do some cool animation
         // burst some neat particles
@@ -99,6 +101,11 @@ public abstract class Enemy : MonoBehaviour
         main.startColor = Color.HSVToRGB(h, s, v);
         // throw it into the void
         Destroy(gameObject);
+    }
+
+    public void DestroyWithoutPoint(Vector2 damageDirection) {
+        _awardPoints = false;
+        OnDeath(damageDirection);
     }
     #endregion
 

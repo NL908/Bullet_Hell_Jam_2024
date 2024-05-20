@@ -8,11 +8,11 @@ public class ScreenClearBomb : MonoBehaviour
 
     // Radius per second
     [SerializeField] float _expandingSpeed;
-    private float _maxRadius;
+    [SerializeField] float _maxRadius = 5;
     private void Start()
     {
 
-        _maxRadius = GameMaster.instance.arenaSize.magnitude + 4;
+        // _maxRadius = GameMaster.instance.arenaSize.magnitude + 4;
     }
 
     private void FixedUpdate()
@@ -36,7 +36,12 @@ public class ScreenClearBomb : MonoBehaviour
     {
         if (((_enemyAndProjLayer.value >> collision.gameObject.layer) & 1) > 0)
         {
-            Destroy(collision.gameObject);
+            // Call enemy's own death script to show death particle
+            if (collision.CompareTag("Enemy")) {
+                Enemy enemy = collision.GetComponent<Enemy>();
+                enemy.DestroyWithoutPoint(enemy.transform.position - transform.position);
+            }
+            else Destroy(collision.gameObject);
         }
     }
 }
