@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D _rb;
     bool invulnerable = false;
-    bool isDead = false;
+    public bool isDead = false;
     SpriteRenderer playerSprite;
 
     // Stats
