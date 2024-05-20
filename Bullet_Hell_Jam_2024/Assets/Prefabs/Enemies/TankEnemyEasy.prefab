@@ -213,13 +213,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3779366386502984595}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de95a895feb50d2428f425df2e3881d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8589364467177450205, guid: f58255ab6303c0f4db970f7a39ad61c7, type: 3}
-  emitInterval: 1.5
+  emitInterval: 2
   isActive: 0
   randomOffsetRange: 0
 --- !u!1 &5417823279759623017
