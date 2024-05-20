@@ -166,7 +166,7 @@ MonoBehaviour:
   speed: 6
   isEnemy: 1
   destroyOnHit: 1
-  splitDelay: 0.5
+  splitDelay: 0.25
   emitter: {fileID: 3095101530962390578}
 --- !u!114 &3095101530962390578
 MonoBehaviour:

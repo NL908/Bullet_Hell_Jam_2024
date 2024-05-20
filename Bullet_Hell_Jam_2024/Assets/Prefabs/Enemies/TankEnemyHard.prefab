@@ -152,7 +152,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -230,8 +230,8 @@ MonoBehaviour:
   deceleration: 0.5
   isAlwaysFacePlayer: 1
   isFacingVelocity: 1
-  hp: 620
-  maxHp: 620
+  hp: 720
+  maxHp: 720
   score: 450
   _deathParticle: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
   mainColor: {r: 1, g: 0.305, b: 0.888075, a: 0.40392157}

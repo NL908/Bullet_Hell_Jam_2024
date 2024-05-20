@@ -126,27 +126,27 @@ public class CanvasScript : MonoBehaviour
     /// Update the enemey progress bar based on given percentage
     /// </summary>
     /// <param name="weaponIndex">Weapon index, 0, 1, 2</param>
-    /// <param name="droneProg">Number between 0 and 1 (inclusive)</param>
-    /// <param name="shooterProg">Number between 0 and 1 (inclusive)</param>
-    /// <param name="tankProg">Number between 0 and 1 (inclusive)</param>
-    public void UpdateEnemeyProgress(int weaponIndex, float droneProg, float shooterProg, float tankProg)
+    /// <param name="easyProg">Number between 0 and 1 (inclusive)</param>
+    /// <param name="mediumProg">Number between 0 and 1 (inclusive)</param>
+    /// <param name="hardProg">Number between 0 and 1 (inclusive)</param>
+    public void UpdateEnemeyProgress(int weaponIndex, float easyProg, float mediumProg, float hardProg)
     {
         switch (weaponIndex)
         {
             case 0:
-                SetNewProgress(weapon1Enemies[0], weapon1Pos[0], weapon1Pos[1], droneProg);
-                SetNewProgress(weapon1Enemies[1], weapon1Pos[0], weapon1Pos[1], shooterProg);
-                SetNewProgress(weapon1Enemies[2], weapon1Pos[0], weapon1Pos[1], tankProg);
+                SetNewProgress(weapon1Enemies[0], weapon1Pos[0], weapon1Pos[1], easyProg);
+                SetNewProgress(weapon1Enemies[1], weapon1Pos[0], weapon1Pos[1], mediumProg);
+                SetNewProgress(weapon1Enemies[2], weapon1Pos[0], weapon1Pos[1], hardProg);
                 break;
             case 1:
-                SetNewProgress(weapon2Enemies[0], weapon2Pos[0], weapon2Pos[1], droneProg);
-                SetNewProgress(weapon2Enemies[1], weapon2Pos[0], weapon2Pos[1], shooterProg);
-                SetNewProgress(weapon2Enemies[2], weapon2Pos[0], weapon2Pos[1], tankProg);
+                SetNewProgress(weapon2Enemies[0], weapon2Pos[0], weapon2Pos[1], easyProg);
+                SetNewProgress(weapon2Enemies[1], weapon2Pos[0], weapon2Pos[1], mediumProg);
+                SetNewProgress(weapon2Enemies[2], weapon2Pos[0], weapon2Pos[1], hardProg);
                 break;
             case 2:
-                SetNewProgress(weapon3Enemies[0], weapon3Pos[0], weapon3Pos[1], droneProg);
-                SetNewProgress(weapon3Enemies[1], weapon3Pos[0], weapon3Pos[1], shooterProg);
-                SetNewProgress(weapon3Enemies[2], weapon3Pos[0], weapon3Pos[1], tankProg);
+                SetNewProgress(weapon3Enemies[0], weapon3Pos[0], weapon3Pos[1], easyProg);
+                SetNewProgress(weapon3Enemies[1], weapon3Pos[0], weapon3Pos[1], mediumProg);
+                SetNewProgress(weapon3Enemies[2], weapon3Pos[0], weapon3Pos[1], hardProg);
                 break;
             default:
                 Debug.LogError("CanvasScript: Bad weaponIndex");

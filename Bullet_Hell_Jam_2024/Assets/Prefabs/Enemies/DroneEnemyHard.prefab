@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -126,9 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ac923faed959d41a196e149278be2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
-  steerForce: 4.5
-  acceleration: 1
+  maxSpeed: 6.2
+  steerForce: 4
+  acceleration: 2
   deceleration: 0
   isAlwaysFacePlayer: 0
   isFacingVelocity: 1
@@ -137,7 +137,7 @@ MonoBehaviour:
   score: 65
   _deathParticle: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
   mainColor: {r: 0.29800004, g: 1, b: 1, a: 0.40392157}
-  sinSpeed: 7
+  sinSpeed: 5
   sinDegree: 50
 --- !u!70 &3966658816977634761
 CapsuleCollider2D:

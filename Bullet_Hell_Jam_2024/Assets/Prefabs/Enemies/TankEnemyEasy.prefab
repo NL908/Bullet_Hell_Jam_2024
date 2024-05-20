@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8589364467177450205, guid: f58255ab6303c0f4db970f7a39ad61c7, type: 3}
-  emitInterval: 2
+  emitInterval: 3
   isActive: 0
   randomOffsetRange: 0
 --- !u!1 &5417823279759623017
