@@ -30,6 +30,12 @@ public class DroneEnemey : Enemy
         }
     }
 
+    protected override void OnDeath(Vector2 damageDirection)
+    {
+        AudioManager.instance.PlaySound("DroneDeath");
+        base.OnDeath(damageDirection);
+    }
+
     protected override Vector2 CalcSteering(Vector2 target)
     {
         /* Drone is using steering seek behaviour.

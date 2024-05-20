@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5742c7d628c905448b4e7d088bc29814, type: 3}
+  m_Name: Sounds
+  m_EditorClassIdentifier: 
+  sounds:
+  - soundName: DroneDeath
+    clip: {fileID: 8300000, guid: 59c9dda869ff94c4498239b15bcaaf1a, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+  - soundName: ShooterDeath
+    clip: {fileID: 8300000, guid: 0acd02e799f55394084268d724ce21e5, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+  - soundName: TankDeath
+    clip: {fileID: 8300000, guid: c4fa8031e4d295c41b78e22100d941a3, type: 3}
+    volume: 0.55
+    pitch: 1
+    loop: 0
+  - soundName: RifleShoot
+    clip: {fileID: 8300000, guid: 1c3411f29a403984ba98fc7a1b5b48e7, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+  - soundName: SniperShoot
+    clip: {fileID: 8300000, guid: ee2aaa21e601415418379c8949dd6bfc, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+  - soundName: RocketShoot
+    clip: {fileID: 8300000, guid: b9c6d114e3984c4459947efeef3d2a15, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
