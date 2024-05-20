@@ -43,3 +43,18 @@ MonoBehaviour:
     volume: 0.6
     pitch: 1
     loop: 0
+  - soundName: PlayerDamage
+    clip: {fileID: 8300000, guid: 568ac1e3157df0a4293045990935bb7b, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+  - soundName: PlayerDeath
+    clip: {fileID: 8300000, guid: a4f645c8ce825d1488268d27216ba072, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+  - soundName: RocketExplode
+    clip: {fileID: 8300000, guid: c352abf35404d2e4dbdc923fb26812d1, type: 3}
+    volume: 0.45
+    pitch: 1
+    loop: 0

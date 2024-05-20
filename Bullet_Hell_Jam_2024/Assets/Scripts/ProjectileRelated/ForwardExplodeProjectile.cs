@@ -21,9 +21,9 @@ public class ForwardExplodeProjectile : HomingProjectile
 
     void Explode() {
         ParticleSystem particleInstance = Instantiate(particle, transform.position, transform.rotation);
+        AudioManager.instance.PlaySound("RocketExplode");
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, _enemyLayer);
         foreach (Collider2D hit in colliders) {
-            Debug.Log("*Gasp* The enemy "+hit.name+" caught in explosion");
             Enemy enemy = hit.GetComponent<Enemy>();
             enemy.OnHit(explosionDamage, enemy.transform.position - transform.position);
         }
