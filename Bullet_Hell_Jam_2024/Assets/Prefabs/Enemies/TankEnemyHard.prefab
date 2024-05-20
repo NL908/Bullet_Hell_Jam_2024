@@ -253,7 +253,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2720050129732264819, guid: 87e6e4f57c2a6cf4891333742adfc982, type: 3}
   emitInterval: 4
   isActive: 0
-  numberOfProjectiles: 3
+  numberOfProjectiles: 2
   angleSpread: 240
   targetPlayer: 1
 --- !u!114 &6768173219931351643
@@ -269,6 +269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8589364467177450205, guid: f58255ab6303c0f4db970f7a39ad61c7, type: 3}
-  emitInterval: 2
+  emitInterval: 3
   isActive: 0
   randomOffsetRange: 0

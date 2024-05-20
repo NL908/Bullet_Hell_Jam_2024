@@ -16,7 +16,7 @@ public class GameMaster : MonoBehaviour
     private float score;
     private int stepBeforeStart = 5;
     private float scorePerSec = 10;
-    private float survivalBonus = 3000;
+    private float survivalBonus = 1000;
 
     public float Score
     {
