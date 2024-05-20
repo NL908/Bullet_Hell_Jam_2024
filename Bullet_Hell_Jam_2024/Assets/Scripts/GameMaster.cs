@@ -36,7 +36,7 @@ public class GameMaster : MonoBehaviour
         get { return currTimer; }
         set
         {
-            currTimer = value;
+            currTimer = Mathf.Max(value, 0);
             try
             {
                 CanvasScript.instance.UpdateTime(currTimer);
