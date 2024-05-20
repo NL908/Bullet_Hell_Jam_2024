@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e490e40f397c0954098bbc13070090e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 146876333254039768, guid: 222da5521fd86994a86f8f036f01212a, type: 3}
-  emitInterval: 0.9
+  projectilePrefab: {fileID: 146876333254039768, guid: aca0851cd1041e6489bbd67394ef69ad, type: 3}
+  emitInterval: 0.7
   isActive: 0
   numberOfProjectiles: 4
   angleSpread: 360

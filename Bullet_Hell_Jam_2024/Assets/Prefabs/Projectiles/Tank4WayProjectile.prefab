@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6506493556619354086}
   - component: {fileID: 146266401409299079}
   m_Layer: 8
-  m_Name: EnemyBasicForwardProjectile
+  m_Name: Tank4WayProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 1.68, y: 0.02, z: 0}
-  m_LocalScale: {x: 0.07836, y: 0.20536001, z: 0.2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.3895598}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0.73639756, b: 0.4433962, a: 1}
+  m_Sprite: {fileID: 1718382875, guid: 614efd0ad9cb35946a5acfa6cc8df724, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,7 +136,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.45, y: 0.69}
   m_Direction: 0
 --- !u!50 &146266401409299079
 Rigidbody2D:
