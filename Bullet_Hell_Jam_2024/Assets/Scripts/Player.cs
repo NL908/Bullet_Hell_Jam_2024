@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D _rb;
     bool invulnerable = false;
-    SpriteRenderer playerSprite;
+    
 
     // Stats
     [SerializeField] protected int life;
@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject screenClearWave;
     [SerializeField] protected ParticleSystem _deathParticle;
     [SerializeField] protected Color mainColor;
+    [SerializeField] SpriteRenderer playerSprite;
+    [SerializeField] SpriteRenderer dottedLineSprite;
 
 
     private void Awake()
@@ -33,7 +35,6 @@ public class Player : MonoBehaviour
     {
         inputHandler = GetComponent<PlayerInputHandler>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
-        playerSprite = GetComponentInChildren<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -95,6 +96,7 @@ public class Player : MonoBehaviour
     {
         AudioManager.instance.PlaySound("PlayerDeath");
         playerSprite.enabled = false;
+        dottedLineSprite.enabled = false;
         // So player cannot be moved anymore
         inputHandler.enabled = false;
         // remove collider
