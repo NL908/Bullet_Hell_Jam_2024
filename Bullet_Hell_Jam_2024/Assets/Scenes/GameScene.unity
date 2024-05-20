@@ -5469,9 +5469,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2224621e2473a8b4eabcb33997abb467, type: 3}
     - target: {fileID: 2773864088911552505, guid: 967261233a147324f88149c018cea39c, type: 3}
+      propertyPath: mainColor.b
+      value: 0.67058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773864088911552505, guid: 967261233a147324f88149c018cea39c, type: 3}
+      propertyPath: mainColor.g
+      value: 0.9803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773864088911552505, guid: 967261233a147324f88149c018cea39c, type: 3}
+      propertyPath: mainColor.r
+      value: 0.69803923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773864088911552505, guid: 967261233a147324f88149c018cea39c, type: 3}
       propertyPath: flashDuration
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2773864088911552505, guid: 967261233a147324f88149c018cea39c, type: 3}
+      propertyPath: _deathParticle
+      value: 
+      objectReference: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
     - target: {fileID: 2773864088911552505, guid: 967261233a147324f88149c018cea39c, type: 3}
       propertyPath: screenClearWave
       value: 

@@ -22,6 +22,9 @@ public class Player : MonoBehaviour
     [SerializeField] float flashDuration = 2.0f;    // Total duration of the flash effect
     [SerializeField] float flashDelay = 0.1f;       // How quickly the sprite flashes on and off
     [SerializeField] GameObject screenClearWave;
+    [SerializeField] protected ParticleSystem _deathParticle;
+    [SerializeField] protected Color mainColor;
+
 
     private void Awake()
     {
@@ -67,18 +70,18 @@ public class Player : MonoBehaviour
     }
 
     [ContextMenu("OnHit")]
-    public void OnHit()
+    public void OnHit(Vector2 damageDirection)
     {
         if (invulnerable) return;
         life = Mathf.Clamp(life - 1, 0, maxLife);
-        
+
         try
         {
             CanvasScript.instance.UpdateLife(life);
         } catch { Debug.LogWarning("Canvas not loaded"); }
         if (life <= 0)
         {
-            OnDeath();
+            OnDeath(damageDirection);
         }
         else
         {
@@ -88,10 +91,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnDeath()
+    private void OnDeath(Vector2 damageDirection)
     {
         playerSprite.enabled = false;
+        // So player cannot be moved anymore
         isDead = true;
+        // remove collider
+        GetComponent<Collider2D>().enabled = false;
+        // burst some neat particles
+        ParticleSystem deathParticle = Instantiate(this._deathParticle, transform.position, Quaternion.LookRotation(Vector3.forward, damageDirection));
+        ParticleSystem.MainModule main = deathParticle.main;
+        main.startColor = mainColor;
         // Trigger gameover when player is ded
         GameMaster.instance.GameOver();
     }

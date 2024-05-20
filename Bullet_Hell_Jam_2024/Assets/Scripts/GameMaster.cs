@@ -89,6 +89,7 @@ public class GameMaster : MonoBehaviour
     {
         Debug.Log("Game over");
         CanvasScript.instance.ShowGameOverScreen();
+        EnemyGenerationManager.instance.isActive = false;
         isGameStarted = false;
     }
 
@@ -97,6 +98,7 @@ public class GameMaster : MonoBehaviour
         Debug.Log("Game Finished");
         Score += survivalBonus;
         CanvasScript.instance.ShowWiningScreen();
+        EnemyGenerationManager.instance.isActive = false;
         isGameStarted = false;
     }
 
