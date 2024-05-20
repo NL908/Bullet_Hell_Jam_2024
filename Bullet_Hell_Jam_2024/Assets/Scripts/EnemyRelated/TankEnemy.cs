@@ -29,6 +29,12 @@ public class TankEnemy: Enemy
         }
     }
 
+    protected override void OnDeath(Vector2 damageDirection)
+    {
+        AudioManager.instance.PlaySound("TankDeath");
+        base.OnDeath(damageDirection);
+    }
+
     /// <summary>
     /// Overriding UpdateRotation to rotate fan emitter independant of parent's rotation
     /// </summary>

@@ -25,4 +25,10 @@ public class ShooterEnemy : Enemy
         return steering;
     }
 
+    protected override void OnDeath(Vector2 damageDirection)
+    {
+        AudioManager.instance.PlaySound("ShooterDeath");
+        base.OnDeath(damageDirection);
+    }
+
 }

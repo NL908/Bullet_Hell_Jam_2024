@@ -32,6 +32,21 @@ public class PlayerWeaponManager : MonoBehaviour
         weaponTimer -= Time.deltaTime;
         if (inputHandler.fireButton) {
             if (weaponTimer <= 0) {
+                // Play corresponding fire sound
+                switch (selectedWeaponIndex) {
+                    case 0:
+                        // Rifle
+                        AudioManager.instance.PlaySound("RifleShoot");
+                        break;
+                    case 1:
+                        // Sniper
+                        AudioManager.instance.PlaySound("SniperShoot");
+                        break;
+                    case 2:
+                        // Rocket
+                        AudioManager.instance.PlaySound("RocketShoot");
+                        break;
+                }
                 // Fire current selected weapon
                 currentEmitter.EmitProjectile();
                 weaponTimer = currentEmitter.emitInterval;
