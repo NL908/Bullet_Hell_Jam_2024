@@ -136,6 +136,14 @@ PrefabInstance:
       value: GameMaster
       objectReference: {fileID: 0}
     - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
+      propertyPath: arenaSize.x
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
+      propertyPath: arenaSize.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
       propertyPath: controlCanvas
       value: 
       objectReference: {fileID: 1749692310}
@@ -3589,7 +3597,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 13, y: 11}
+  m_Size: {x: 22, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4307,8 +4315,8 @@ Transform:
   m_GameObject: {fileID: 1011043258}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.84, y: -0.05, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 953801954}
@@ -4359,7 +4367,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 29.1, y: 12}
+  m_Size: {x: 43.23, y: 25.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5890,8 +5898,8 @@ Transform:
   m_GameObject: {fileID: 1255674939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.92, y: -0.14, z: 0}
-  m_LocalScale: {x: 1.05, y: 1.58, z: 1}
+  m_LocalPosition: {x: -19.06, y: -0.1, z: 0}
+  m_LocalScale: {x: 1.86, y: 2.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7236,7 +7244,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7261,7 +7269,7 @@ Transform:
   m_GameObject: {fileID: 1553655669}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7, y: 0, z: -10}
+  m_LocalPosition: {x: -6.4, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9970,6 +9978,42 @@ PrefabInstance:
     - target: {fileID: 4805628181173055521, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: m_Name
       value: EnemyGenerationManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: selectedGenerationRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].fireGenerationRate
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].fireGenerationRate
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].hardProgress.maxProgress
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].hardProgress.maxProgress
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].hardProgress.maxProgress
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[0].mediumProgress.maxProgress
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[1].mediumProgress.maxProgress
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921803604699713245, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
+      propertyPath: progressGroups.Array.data[2].mediumProgress.maxProgress
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8836866910078156085, guid: ac8f4c231a10fa4498a59a8382f614b5, type: 3}
       propertyPath: m_LocalPosition.x

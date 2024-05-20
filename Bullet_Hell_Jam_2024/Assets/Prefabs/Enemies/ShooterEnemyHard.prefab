@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -168,8 +168,8 @@ MonoBehaviour:
   deceleration: 5
   isAlwaysFacePlayer: 1
   isFacingVelocity: 1
-  hp: 0
-  maxHp: 60
+  hp: 280
+  maxHp: 280
   score: 450
   _deathParticle: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
   mainColor: {r: 1, g: 0.88195, b: 0.29800004, a: 0.39607844}

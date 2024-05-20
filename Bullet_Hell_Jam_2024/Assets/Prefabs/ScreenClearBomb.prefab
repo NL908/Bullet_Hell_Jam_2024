@@ -196,5 +196,5 @@ MonoBehaviour:
   _enemyAndProjLayer:
     serializedVersion: 2
     m_Bits: 384
-  _expandingSpeed: 9
-  _maxRadius: 4.5
+  _expandingSpeed: 20
+  _maxRadius: 10
