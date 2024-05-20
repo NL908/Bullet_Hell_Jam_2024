@@ -11,7 +11,7 @@ public class DummyEnemy : Enemy
 
     protected override void OnDeath(Vector2 damageDirection)
     {
-        GameMaster.instance.StartGame();
+        GameMaster.instance.DestroyStartEnemey();
         base.OnDeath(damageDirection);
     }
 }
