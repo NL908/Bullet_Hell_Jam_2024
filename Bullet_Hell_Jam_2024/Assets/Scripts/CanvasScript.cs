@@ -73,6 +73,15 @@ public class CanvasScript : MonoBehaviour
         gameWinScreen.SetActive(true);
         gameWinScore.text = score.text;
     }
+
+    /// <summary>
+    /// Called when the retry button in result screen is clicked
+    /// </summary>
+    public void OnClickRetry()
+    {
+        GameMaster.instance.Restart();
+    }
+
     /// <summary>
     /// Update selection UI for weapon
     /// </summary>
