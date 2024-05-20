@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
 
     Rigidbody2D _rb;
     bool invulnerable = false;
-    public bool isDead = false;
     SpriteRenderer playerSprite;
 
     // Stats
@@ -41,7 +40,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Gather player input 
-        if (!isDead) inputHandler.TickInput();
+        inputHandler.TickInput();
     }
 
     private void FixedUpdate()
@@ -97,14 +96,17 @@ public class Player : MonoBehaviour
         AudioManager.instance.PlaySound("PlayerDeath");
         playerSprite.enabled = false;
         // So player cannot be moved anymore
-        isDead = true;
+        inputHandler.enabled = false;
         // remove collider
         GetComponent<Collider2D>().enabled = false;
         // burst some neat particles
-        ParticleSystem deathParticle = Instantiate(this._deathParticle, transform.position, Quaternion.LookRotation(Vector3.forward, damageDirection));
-        Debug.Log(deathParticle);
-        ParticleSystem.MainModule main = deathParticle.main;
-        main.startColor = mainColor;
+        for (int i = 0; i < 5; i++)
+        {
+            ParticleSystem deathParticle = Instantiate(this._deathParticle, transform.position, Quaternion.LookRotation(Vector3.forward, damageDirection));
+            Debug.Log(deathParticle);
+            ParticleSystem.MainModule main = deathParticle.main;
+            main.startColor = mainColor;
+        }
         // Trigger gameover when player is ded
         GameMaster.instance.GameOver();
     }
