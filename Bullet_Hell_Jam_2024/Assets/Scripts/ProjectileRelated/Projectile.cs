@@ -37,7 +37,7 @@ public abstract class Projectile : MonoBehaviour
         if (isEnemy && other.tag == "Player") {
             // Enemy bullet hit player
             // Debug.Log("Player take damage ouchie ouch");
-            Player.instance.OnHit();
+            Player.instance.OnHit(other.transform.position - transform.position);
             if (destroyOnHit) {
                 Destroy(gameObject);
             }

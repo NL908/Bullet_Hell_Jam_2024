@@ -25,7 +25,7 @@ public class DroneEnemey : Enemy
         if (collision.collider.tag == "Player")
         {
             // Explode, kaboom, deal damage to player
-            Player.instance.OnHit();
+            Player.instance.OnHit(collision.transform.position - transform.position);
             OnDeath(collision.transform.position - transform.position);
         }
     }

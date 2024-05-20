@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5155572795098884661}
   - component: {fileID: 2720050129732264819}
   - component: {fileID: 6659336275661727349}
-  m_Layer: 0
-  m_Name: TestTrackingProjectile
+  m_Layer: 8
+  m_Name: EnemyTrackingProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
