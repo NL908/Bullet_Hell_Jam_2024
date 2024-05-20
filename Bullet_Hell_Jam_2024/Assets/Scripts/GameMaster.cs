@@ -23,12 +23,15 @@ public class GameMaster : MonoBehaviour
         get { return score; }
         set
         {
-            score = value;
-            try
+            if (isGameStarted)
             {
-                CanvasScript.instance.UpdateScore((int)score);
+                score = value;
+                try
+                {
+                    CanvasScript.instance.UpdateScore((int)score);
+                }
+                catch (Exception e) { Debug.LogError("Score UI update error with: " + e.Message); }
             }
-            catch (Exception e) { Debug.LogError("Score UI update error with: " + e.Message); }
         }
     }
 
