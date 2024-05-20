@@ -342,7 +342,7 @@ MonoBehaviour:
   flashDelay: 0.1
   screenClearWave: {fileID: 3030087057071265163, guid: 3c638912037906740801c914c97e7838, type: 3}
   _deathParticle: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
-  mainColor: {r: 0.69803923, g: 0.9803922, b: 0.67058825, a: 0}
+  mainColor: {r: 0.69803923, g: 0.9803922, b: 0.67058825, a: 1}
 --- !u!114 &7153058729815474956
 MonoBehaviour:
   m_ObjectHideFlags: 0

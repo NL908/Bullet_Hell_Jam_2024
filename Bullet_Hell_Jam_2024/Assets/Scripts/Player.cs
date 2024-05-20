@@ -100,6 +100,7 @@ public class Player : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         // burst some neat particles
         ParticleSystem deathParticle = Instantiate(this._deathParticle, transform.position, Quaternion.LookRotation(Vector3.forward, damageDirection));
+        Debug.Log(deathParticle);
         ParticleSystem.MainModule main = deathParticle.main;
         main.startColor = mainColor;
         // Trigger gameover when player is ded
