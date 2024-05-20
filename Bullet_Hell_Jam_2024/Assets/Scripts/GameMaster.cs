@@ -13,6 +13,7 @@ public class GameMaster : MonoBehaviour
     public Vector2 arenaSize;
 
     private float score;
+    private int stepBeforeStart = 5;
     public float Score
     {
         get { return score; }
@@ -54,6 +55,7 @@ public class GameMaster : MonoBehaviour
     {
         Score = 0;
         CurrTimer = maxTime;
+        stepBeforeStart = 5;
     }
 
     private void LateUpdate()
@@ -95,5 +97,14 @@ public class GameMaster : MonoBehaviour
 
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void DestroyStartEnemey()
+    {
+        stepBeforeStart--;
+        if (stepBeforeStart == 0)
+        {
+            StartGame();
+        }
     }
 }
