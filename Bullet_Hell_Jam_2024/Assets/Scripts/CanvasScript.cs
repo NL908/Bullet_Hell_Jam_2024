@@ -10,6 +10,8 @@ public class CanvasScript : MonoBehaviour
 {
     public static CanvasScript instance;
 
+    private float scoreDisplayCap = 99999;
+
     [SerializeField] Image[] lifes;
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
@@ -29,9 +31,11 @@ public class CanvasScript : MonoBehaviour
     ///  Update score UI to a new value
     /// </summary>
     /// <param name="newScore">The score you want to display</param>
-    public void UpdateScore(int newScore)
+    public void UpdateScore(float newScore)
     {
-        score.text = newScore.ToString();
+
+        float displayed = Mathf.Clamp(newScore, 0, scoreDisplayCap);
+        score.text = displayed.ToString().PadLeft(5, '0'); ;
     }
     /// <summary>
     /// Update the time UI to a new value
