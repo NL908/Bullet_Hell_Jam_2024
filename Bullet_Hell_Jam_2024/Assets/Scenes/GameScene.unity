@@ -136,6 +136,10 @@ PrefabInstance:
       value: GameMaster
       objectReference: {fileID: 0}
     - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
+      propertyPath: maxTime
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
       propertyPath: arenaSize.x
       value: 22
       objectReference: {fileID: 0}
@@ -147,6 +151,10 @@ PrefabInstance:
       propertyPath: controlCanvas
       value: 
       objectReference: {fileID: 1749692310}
+    - target: {fileID: 7042781513175539841, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
+      propertyPath: winingScreenClear
+      value: 
+      objectReference: {fileID: 3030087057071265163, guid: 10d9b29ec23bc9f4b90b468c773f5c84, type: 3}
     - target: {fileID: 7267706738727294767, guid: 48db4620de7f8ac4b8856adf0b67aa2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

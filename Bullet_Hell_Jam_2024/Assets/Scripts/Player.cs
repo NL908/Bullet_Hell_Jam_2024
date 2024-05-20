@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
     [ContextMenu("OnHit")]
     public void OnHit(Vector2 damageDirection)
     {
-        if (invulnerable) return;
+        if (invulnerable || !GameMaster.instance.isGameStarted) return;
         life = Mathf.Clamp(life - 1, 0, maxLife);
 
         try

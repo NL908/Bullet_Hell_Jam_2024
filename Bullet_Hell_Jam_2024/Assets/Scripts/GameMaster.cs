@@ -56,6 +56,7 @@ public class GameMaster : MonoBehaviour
 
     [SerializeField]
     private GameObject controlCanvas;
+    [SerializeField] GameObject winingScreenClear;
 
     private void Awake()
     {
@@ -104,6 +105,7 @@ public class GameMaster : MonoBehaviour
     public void GameWin()
     {
         Debug.Log("Game Finished");
+        Instantiate(winingScreenClear, Vector3.zero, Quaternion.identity);
         Score += survivalBonus;
         CanvasScript.instance.ShowWiningScreen();
         EnemyGenerationManager.instance.isActive = false;
