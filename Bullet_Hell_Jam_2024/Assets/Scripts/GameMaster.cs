@@ -81,7 +81,7 @@ public class GameMaster : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("Game over");
+        EnemyGenerationManager.instance.isActive = false;
         CanvasScript.instance.ShowResultScreen();
         isGameStarted = false;
     }
