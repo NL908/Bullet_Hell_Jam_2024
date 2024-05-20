@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2720050129732264819}
   - component: {fileID: 6659336275661727349}
   m_Layer: 8
-  m_Name: EnemyTrackingProjectile
+  m_Name: TankTrackingProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.42, y: -4.18, z: 0}
-  m_LocalScale: {x: 0.14, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 16}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.7132075, g: 0.08570341, b: 0.025567714, a: 1}
+  m_Sprite: {fileID: -1687560216, guid: b080c77538b91594f8dc7c8362c915c2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,7 +120,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.99999994, y: 2}
+  m_Size: {x: 0.5, y: 0.86}
   m_Direction: 0
 --- !u!114 &2720050129732264819
 MonoBehaviour:
