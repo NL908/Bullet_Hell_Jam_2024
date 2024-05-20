@@ -28,7 +28,6 @@ public class PlayerWeaponManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.instance.isDead) return;
         ProjectileEmitter currentEmitter = emitters[selectedWeaponIndex];
         weaponTimer -= Time.deltaTime;
         if (inputHandler.fireButton) {

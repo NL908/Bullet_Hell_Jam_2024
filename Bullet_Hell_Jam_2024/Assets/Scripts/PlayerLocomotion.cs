@@ -24,8 +24,6 @@ public class PlayerLocomotion : MonoBehaviour
     public void HandleMovement(Vector2 moveDirection)
     {
         _rb.velocity = moveDirection * movementSpeed;
-        // stop moving if player ded
-        if (Player.instance.isDead) _rb.velocity *= 0;
     }
 
     public void HandleAimDirection(Vector2 aimDirection)
