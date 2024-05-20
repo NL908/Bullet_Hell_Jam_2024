@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -124,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99629ee1d0c1e234887c0be15095adc0
-      internalID: 217531301
+      spriteID: 4a09a515e14acf541a8821ae7c83120b
+      internalID: 500038976
       vertices: []
       indices: 
       edges: []
@@ -145,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13671088c293bcb40a0e235f61be2d5a
-      internalID: 1809170959
+      spriteID: 0f7b9f71a8c4e334689f2b66d8ee6b87
+      internalID: -1544528151
       vertices: []
       indices: 
       edges: []
@@ -166,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0323835623c5eb4ebb52e892c4614d7
-      internalID: 939313696
+      spriteID: 0d50deba94ea8bf4fbadeb1f7ba093cb
+      internalID: 192694853
       vertices: []
       indices: 
       edges: []
@@ -183,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WeaponIcons_0: 217531301
-      WeaponIcons_1: 1809170959
-      WeaponIcons_2: 939313696
+      WeaponIcons_0: 500038976
+      WeaponIcons_1: -1544528151
+      WeaponIcons_2: 192694853
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
