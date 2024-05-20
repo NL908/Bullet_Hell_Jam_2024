@@ -10,6 +10,8 @@ public class CanvasScript : MonoBehaviour
 {
     public static CanvasScript instance;
 
+    private float scoreDisplayCap = 99999;
+
     [SerializeField] Image[] lifes;
     [SerializeField] TextMeshProUGUI score;
     [SerializeField] TextMeshProUGUI time;
@@ -29,9 +31,11 @@ public class CanvasScript : MonoBehaviour
     ///  Update score UI to a new value
     /// </summary>
     /// <param name="newScore">The score you want to display</param>
-    public void UpdateScore(int newScore)
+    public void UpdateScore(float newScore)
     {
-        score.text = newScore.ToString();
+
+        float displayed = Mathf.Clamp(newScore, 0, scoreDisplayCap);
+        score.text = displayed.ToString().PadLeft(5, '0'); ;
     }
     /// <summary>
     /// Update the time UI to a new value
@@ -73,6 +77,15 @@ public class CanvasScript : MonoBehaviour
         gameWinScreen.SetActive(true);
         gameWinScore.text = score.text;
     }
+
+    /// <summary>
+    /// Called when the retry button in result screen is clicked
+    /// </summary>
+    public void OnClickRetry()
+    {
+        GameMaster.instance.Restart();
+    }
+
     /// <summary>
     /// Update selection UI for weapon
     /// </summary>
@@ -109,7 +122,13 @@ public class CanvasScript : MonoBehaviour
     [SerializeField] Image[] weapon2Pos;
     [SerializeField] Image[] weapon3Enemies;
     [SerializeField] Image[] weapon3Pos;
-
+    /// <summary>
+    /// Update the enemey progress bar based on given percentage
+    /// </summary>
+    /// <param name="weaponIndex">Weapon index, 0, 1, 2</param>
+    /// <param name="droneProg">Number between 0 and 1 (inclusive)</param>
+    /// <param name="shooterProg">Number between 0 and 1 (inclusive)</param>
+    /// <param name="tankProg">Number between 0 and 1 (inclusive)</param>
     public void UpdateEnemeyProgress(int weaponIndex, float droneProg, float shooterProg, float tankProg)
     {
         switch (weaponIndex)

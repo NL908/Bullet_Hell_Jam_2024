@@ -11,10 +11,17 @@ public class Player : MonoBehaviour
     PlayerLocomotion playerLocomotion;
 
     Rigidbody2D _rb;
+    bool invulnerable = false;
+    bool isDead = false;
+    SpriteRenderer playerSprite;
 
     // Stats
     [SerializeField] protected int life;
     [SerializeField] protected int maxLife;
+    // flash effect after taking damage
+    [SerializeField] float flashDuration = 2.0f;    // Total duration of the flash effect
+    [SerializeField] float flashDelay = 0.1f;       // How quickly the sprite flashes on and off
+    [SerializeField] GameObject screenClearWave;
 
     private void Awake()
     {
@@ -24,13 +31,14 @@ public class Player : MonoBehaviour
     {
         inputHandler = GetComponent<PlayerInputHandler>();
         playerLocomotion = GetComponent<PlayerLocomotion>();
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        // Gather player input
-        inputHandler.TickInput();
+        // Gather player input 
+        if (!isDead) inputHandler.TickInput();
     }
 
     private void FixedUpdate()
@@ -61,7 +69,9 @@ public class Player : MonoBehaviour
     [ContextMenu("OnHit")]
     public void OnHit()
     {
+        if (invulnerable) return;
         life = Mathf.Clamp(life - 1, 0, maxLife);
+        
         try
         {
             CanvasScript.instance.UpdateLife(life);
@@ -70,12 +80,42 @@ public class Player : MonoBehaviour
         {
             OnDeath();
         }
+        else
+        {
+            Instantiate(screenClearWave, transform.position, Quaternion.identity);
+            invulnerable = true;
+            StartCoroutine(FlashEffect());
+        }
     }
 
     private void OnDeath()
     {
-        Debug.Log("Player Death");
+        playerSprite.enabled = false;
+        isDead = true;
         // Trigger gameover when player is ded
         GameMaster.instance.GameOver();
     }
+
+    IEnumerator FlashEffect()
+    {
+        float elapsedTime = 0f;
+        bool spriteActive = true;
+
+        while (elapsedTime < flashDuration)
+        {
+            // Toggle visibility
+            playerSprite.enabled = spriteActive;
+            spriteActive = !spriteActive;
+
+            // Wait for a bit before toggling visibility again
+            yield return new WaitForSeconds(flashDelay);
+            elapsedTime += flashDelay;
+        }
+
+        // Ensure sprite is visible after flashing ends
+        // Also turn off invulnerbility
+        playerSprite.enabled = true;
+        invulnerable = false;
+    }
+
 }

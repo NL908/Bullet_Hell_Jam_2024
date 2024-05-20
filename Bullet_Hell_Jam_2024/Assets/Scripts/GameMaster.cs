@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameMaster : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class GameMaster : MonoBehaviour
     public Vector2 arenaSize;
 
     private float score;
+    private int stepBeforeStart = 5;
+    private float scorePerSec = 100;
+    private float survivalBonus = 10000;
+
     public float Score
     {
         get { return score; }
@@ -54,6 +59,7 @@ public class GameMaster : MonoBehaviour
     {
         Score = 0;
         CurrTimer = maxTime;
+        stepBeforeStart = 5;
     }
 
     private void LateUpdate()
@@ -62,7 +68,7 @@ public class GameMaster : MonoBehaviour
         if (isGameStarted)
         {
             CurrTimer -= Time.deltaTime;
-
+            Score += Time.deltaTime * scorePerSec;
             if (CurrTimer <= 0)
             {
                 Debug.Log("Time is over!");
@@ -89,11 +95,21 @@ public class GameMaster : MonoBehaviour
     public void GameWin()
     {
         Debug.Log("Game Finished");
+        Score += survivalBonus;
         CanvasScript.instance.ShowWiningScreen();
         isGameStarted = false;
     }
 
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void DestroyStartEnemey()
+    {
+        stepBeforeStart--;
+        if (stepBeforeStart == 0)
+        {
+            StartGame();
+        }
     }
 }
