@@ -713,6 +713,14 @@ PrefabInstance:
       value: StartEnemyA
       objectReference: {fileID: 0}
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: steerForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.b
       value: 0.48235294
       objectReference: {fileID: 0}
@@ -723,6 +731,18 @@ PrefabInstance:
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.r
       value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: acceleration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: deceleration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: isFacingVelocity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -850,6 +870,14 @@ PrefabInstance:
       value: StartEnemyR
       objectReference: {fileID: 0}
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: steerForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.b
       value: 0.96862745
       objectReference: {fileID: 0}
@@ -860,6 +888,18 @@ PrefabInstance:
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.r
       value: 0.37254903
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: acceleration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: deceleration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: isFacingVelocity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2020,6 +2060,14 @@ PrefabInstance:
       value: StartEnemyT1
       objectReference: {fileID: 0}
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: steerForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.b
       value: 0.8
       objectReference: {fileID: 0}
@@ -2030,6 +2078,18 @@ PrefabInstance:
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.r
       value: 0.99607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: acceleration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: deceleration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: isFacingVelocity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3816,6 +3876,14 @@ PrefabInstance:
       value: StartEnemyS
       objectReference: {fileID: 0}
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: steerForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.b
       value: 0.5372549
       objectReference: {fileID: 0}
@@ -3826,6 +3894,18 @@ PrefabInstance:
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.r
       value: 0.9882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: acceleration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: deceleration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: isFacingVelocity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5526,6 +5606,14 @@ PrefabInstance:
       value: StartEnemyT2
       objectReference: {fileID: 0}
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: steerForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.b
       value: 0.8
       objectReference: {fileID: 0}
@@ -5536,6 +5624,18 @@ PrefabInstance:
     - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
       propertyPath: mainColor.r
       value: 0.99607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: acceleration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: deceleration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369924781588147574, guid: 3dbae4f40e15ff142b4360445b6b42ad, type: 3}
+      propertyPath: isFacingVelocity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6191,3 +6291,4 @@ SceneRoots:
   - {fileID: 1355173489}
   - {fileID: 1673627977}
   - {fileID: 2705191952709381329}
+  - {fileID: 1686378090}

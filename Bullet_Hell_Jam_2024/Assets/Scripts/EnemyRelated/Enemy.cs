@@ -23,6 +23,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float acceleration;
     [SerializeField] protected float deceleration;
     [SerializeField] protected bool isAlwaysFacePlayer = false;
+    [SerializeField] protected bool isFacingVelocity = true;
 
     // Stats
     [Header("Stats")]
@@ -147,7 +148,7 @@ public abstract class Enemy : MonoBehaviour
             // Rotation is faced towards the player
             transform.rotation = Quaternion.LookRotation(Vector3.forward, Player.instance.transform.position - transform.position);
         }
-        else
+        if (isFacingVelocity)
         {
             transform.rotation = Quaternion.LookRotation(Vector3.forward, _rb.velocity);
         }

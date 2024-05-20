@@ -166,8 +166,10 @@ MonoBehaviour:
   acceleration: 0
   deceleration: 0
   isAlwaysFacePlayer: 0
+  isFacingVelocity: 1
   hp: 300
   maxHp: 300
   score: 0
   _deathParticle: {fileID: 3742396230992251044, guid: a6948c830663f73428d19346fe9834bc, type: 3}
   mainColor: {r: 1, g: 1, b: 1, a: 0.40392157}
+  pushForce: 5
